@@ -21,7 +21,7 @@
 
 			<div style="text-align:center">
 
-				<h2><b>Encuestas Cafe</b></h2>
+				<h2><b>Sistema de Control de Personal</b></h2>
 				{{-- <h3><b>Administración </b></h3> --}}
 				<img src="{{asset('img/logopersona.png')}}" style="width:350x;height:250px;" class="centered"/>
 			</div>
