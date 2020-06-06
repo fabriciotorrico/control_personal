@@ -1,7 +1,6 @@
 <?php
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Password Reminder Language Lines
@@ -13,10 +12,9 @@ return [
     |
     */
 
-    'password' => 'Şifreler altı karakter olmalı ve onay ile eşleşmelidir.',
-    'reset'    => 'Şifre sıfırlandı!',
-    'sent'     => 'Şifre sıfırlama başarı ile gönderildi!',
-    'token'    => 'Şifre sıfırlama bileti geçersiz.',
-    'user'     => 'Bu e-mail adresi ile kayıtlı üye bulunamıyor.',
-
+    'password' => 'Parolanız en az altı karakter olmalı ve doğrulama ile eşleşmelidir.',
+    'reset'    => 'Parolanız sıfırlandı!',
+    'sent'     => 'Parola sıfırlama bağlantınız e-posta ile gönderildi!',
+    'token'    => 'Parola sıfırlama adresi/kodu geçersiz.',
+    'user'     => 'Bu e-posta adresi ile kayıtlı bir üye bulunmuyor.',
 ];

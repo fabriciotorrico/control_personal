@@ -1,7 +1,6 @@
 <?php
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Мовні ресурси перевірки введення
@@ -32,6 +31,7 @@ return [
     'boolean'              => 'Поле :attribute повинне містити логічний тип.',
     'confirmed'            => 'Поле :attribute не збігається з підтвердженням.',
     'date'                 => 'Поле :attribute не є датою.',
+    'date_equals'          => 'Поле :attribute має бути датою рівною :date.',
     'date_format'          => 'Поле :attribute не відповідає формату :format.',
     'different'            => 'Поля :attribute та :other повинні бути різними.',
     'digits'               => 'Довжина цифрового поля :attribute повинна дорівнювати :digits.',
@@ -42,12 +42,38 @@ return [
     'file'                 => 'Поле :attribute має містити файл.',
     'filled'               => "Поле :attribute є обов'язковим для заповнення.",
     'exists'               => 'Вибране для :attribute значення не коректне.',
+    'gt'                   => [
+        'numeric' => 'Поле :attribute має бути більше ніж :value.',
+        'file'    => 'Поле :attribute має бути більше ніж :value кілобайт.',
+        'string'  => 'Поле :attribute має бути більше ніж :value символів.',
+        'array'   => 'Поле :attribute має містити більше ніж :value елементів.',
+    ],
+    'gte'                  => [
+        'numeric' => 'Поле :attribute має доріванювати чи бути більше ніж :value.',
+        'file'    => 'Поле :attribute має доріванювати чи бути більше ніж :value кілобайт.',
+        'string'  => 'Поле :attribute має доріванювати чи бути більше ніж :value символів.',
+        'array'   => 'Поле :attribute має містити :value чи більше елементів.',
+    ],
     'image'                => 'Поле :attribute має містити зображення.',
     'in'                   => 'Вибране для :attribute значення не коректне.',
     'in_array'             => 'Значення поля :attribute не міститься в :other.',
     'integer'              => 'Поле :attribute має містити ціле число.',
     'ip'                   => 'Поле :attribute має містити IP адресу.',
+    'ipv4'                 => 'Поле :attribute має містити IPv4 адресу.',
+    'ipv6'                 => 'Поле :attribute має містити IPv6 адресу.',
     'json'                 => 'Дані поля :attribute мають бути в форматі JSON.',
+    'lt'                   => [
+        'numeric' => 'Поле :attribute має бути менше ніж :value.',
+        'file'    => 'Поле :attribute має бути менше ніж :value кілобайт.',
+        'string'  => 'Поле :attribute має бути менше ніж :value символів.',
+        'array'   => 'Поле :attribute має містити менше ніж :value items.',
+    ],
+    'lte'                  => [
+        'numeric' => 'Поле :attribute має дорівнювати чи бути менше ніж :value.',
+        'file'    => 'Поле :attribute має дорівнювати чи бути менше ніж :value кілобайт.',
+        'string'  => 'Поле :attribute має дорівнювати чи бути менше ніж :value символів.',
+        'array'   => 'Поле :attribute має містити не більше ніж :value елементів.',
+    ],
     'max'                  => [
         'numeric' => 'Поле :attribute має бути не більше :max.',
         'file'    => 'Файл в полі :attribute має бути не більше :max кілобайт.',
@@ -57,12 +83,13 @@ return [
     'mimes'                => 'Поле :attribute повинне містити файл одного з типів: :values.',
     'mimetypes'            => 'Поле :attribute повинне містити файл одного з типів: :values.',
     'min'                  => [
-        'numeric' => 'Поле :attribute повинне бути не більше :min.',
+        'numeric' => 'Поле :attribute повинне бути не менше :min.',
         'file'    => 'Розмір файлу в полі :attribute має бути не меншим :min кілобайт.',
         'string'  => 'Текст в полі :attribute повинен містити не менше :min символів.',
         'array'   => 'Поле :attribute повинне містити не менше :min елементів.',
     ],
     'not_in'               => 'Вибране для :attribute значення не коректне.',
+    'not_regex'            => 'Формат поля :attribute не вірний.',
     'numeric'              => 'Поле :attribute повинно містити число.',
     'present'              => 'Поле :attribute повинне бути присутнє.',
     'regex'                => 'Поле :attribute має хибний формат.',
@@ -80,11 +107,13 @@ return [
         'string'  => 'Текст в полі :attribute повинен містити :size символів.',
         'array'   => 'Поле :attribute повинне містити :size елементів.',
     ],
+    'starts_with'          => 'Поле :attribute повинне розпочинатись з одного з наступного: :values',
     'string'               => 'Поле :attribute повинне містити текст.',
     'timezone'             => 'Поле :attribute повинне містити коректну часову зону.',
     'unique'               => 'Таке значення поля :attribute вже існує.',
     'uploaded'             => 'Завантаження поля :attribute не вдалося.',
     'url'                  => 'Формат поля :attribute неправильний.',
+    'uuid'                 => 'Поле :attribute має бути коректним UUID ідентифікатором.',
 
     /*
     |--------------------------------------------------------------------------
@@ -97,7 +126,7 @@ return [
     |
     */
 
-    'custom'               => [
+    'custom' => [
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],
@@ -112,10 +141,43 @@ return [
     | для зручності користувачів. Наприклад, вказати "Електронна адреса" замість
     | "email".
     |
+    | Приклад використання
+    |
+    |   'attributes' => [
+    |       'email' => 'Електронна адреса',
+    |   ],
+    |
     */
 
-    'attributes'           => [
-        //
+    'attributes' => [
+        'name'                  => 'Ім\'я',
+        'username'              => 'Нікнейм',
+        'email'                 => 'E-Mail адреса',
+        'first_name'            => 'Ім\'я',
+        'last_name'             => 'Прізвище',
+        'password'              => 'Пароль',
+        'password_confirmation' => 'Підтвердження паролю',
+        'city'                  => 'Місто',
+        'country'               => 'Країна',
+        'address'               => 'Адреса',
+        'phone'                 => 'Телефон',
+        'mobile'                => 'Моб. номер',
+        'age'                   => 'Вік',
+        'sex'                   => 'Стать',
+        'gender'                => 'Стать',
+        'day'                   => 'День',
+        'month'                 => 'Місяць',
+        'year'                  => 'Рік',
+        'hour'                  => 'Година',
+        'minute'                => 'Хвилина',
+        'second'                => 'Секунда',
+        'title'                 => 'Назва',
+        'content'               => 'Контент',
+        'description'           => 'Опис',
+        'excerpt'               => 'Уривок',
+        'date'                  => 'Дата',
+        'time'                  => 'Час',
+        'available'             => 'Доступно',
+        'size'                  => 'Розмір',
     ],
-
 ];

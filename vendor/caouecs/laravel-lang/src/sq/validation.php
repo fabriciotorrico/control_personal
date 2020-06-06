@@ -1,7 +1,6 @@
 <?php
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Validation Language Lines
@@ -9,7 +8,7 @@ return [
     |
     | The following language lines contain the default error messages used by
     | the validator class. Some of these rules have multiple versions such
-    | such as the size rules. Feel free to tweak each of these messages.
+    | as the size rules. Feel free to tweak each of these messages.
     |
     */
 
@@ -32,6 +31,7 @@ return [
     'boolean'              => 'Fusha :attribute duhet të jetë e vërtetë ose e gabuar',
     'confirmed'            => ':attribute konfirmimi nuk përputhet.',
     'date'                 => ':attribute nuk është një datë e saktë.',
+    'date_equals'          => 'The :attribute must be a date equal to :date.',
     'date_format'          => ':attribute nuk i përshtatet formatit :format.',
     'different'            => ':attribute dhe :other duhet të jenë të ndryshme.',
     'digits'               => ':attribute duhet të jetë :digits shifra.',
@@ -42,12 +42,38 @@ return [
     'exists'               => ':attribute përzgjedhur është i/e pasaktë.',
     'file'                 => 'The :attribute must be a file.',
     'filled'               => 'Fusha :attribute është e kërkuar.',
+    'gt'                   => [
+        'numeric' => 'The :attribute must be greater than :value.',
+        'file'    => 'The :attribute must be greater than :value kilobytes.',
+        'string'  => 'The :attribute must be greater than :value characters.',
+        'array'   => 'The :attribute must have more than :value items.',
+    ],
+    'gte'                  => [
+        'numeric' => 'The :attribute must be greater than or equal :value.',
+        'file'    => 'The :attribute must be greater than or equal :value kilobytes.',
+        'string'  => 'The :attribute must be greater than or equal :value characters.',
+        'array'   => 'The :attribute must have :value items or more.',
+    ],
     'image'                => ':attribute duhet të jetë imazh.',
     'in'                   => ':attribute përzgjedhur është i/e pasaktë.',
     'in_array'             => 'The :attribute field does not exist in :other.',
     'integer'              => ':attribute duhet të jetë numër i plotë.',
     'ip'                   => ':attribute duhet të jetë një IP adresë e saktë.',
+    'ipv4'                 => 'The :attribute must be a valid IPv4 address.',
+    'ipv6'                 => 'The :attribute must be a valid IPv6 address.',
     'json'                 => 'The :attribute must be a valid JSON string.',
+    'lt'                   => [
+        'numeric' => 'The :attribute must be less than :value.',
+        'file'    => 'The :attribute must be less than :value kilobytes.',
+        'string'  => 'The :attribute must be less than :value characters.',
+        'array'   => 'The :attribute must have less than :value items.',
+    ],
+    'lte'                  => [
+        'numeric' => 'The :attribute must be less than or equal :value.',
+        'file'    => 'The :attribute must be less than or equal :value kilobytes.',
+        'string'  => 'The :attribute must be less than or equal :value characters.',
+        'array'   => 'The :attribute must not have more than :value items.',
+    ],
     'max'                  => [
         'numeric' => ':attribute nuk mund të jetë më tepër se :max.',
         'file'    => ':attribute nuk mund të jetë më tepër se :max kilobajtë.',
@@ -63,6 +89,7 @@ return [
         'array'   => ':attribute nuk mund të ketë më pak se :min elemente.',
     ],
     'not_in'               => ':attribute përzgjedhur është i/e pasaktë.',
+    'not_regex'            => 'The :attribute format is invalid.',
     'numeric'              => ':attribute duhet të jetë një numër.',
     'present'              => 'The :attribute field must be present.',
     'regex'                => 'Formati i :attribute është i pasaktë.',
@@ -80,11 +107,13 @@ return [
         'string'  => ':attribute duhet të jetë :size karaktere.',
         'array'   => ':attribute duhet të ketë :size elemente.',
     ],
+    'starts_with'          => 'The :attribute must start with one of the following: :values',
     'string'               => ':attribute duhet të jetë varg.',
     'timezone'             => ':attribute duhet të jetë zonë e saktë.',
     'unique'               => ':attribute është marrë tashmë.',
     'uploaded'             => 'The :attribute failed to upload.',
     'url'                  => 'Formati i :attribute është i pasaktë.',
+    'uuid'                 => 'The :attribute must be a valid UUID.',
 
     /*
     |--------------------------------------------------------------------------
@@ -97,7 +126,7 @@ return [
     |
     */
 
-    'custom'               => [
+    'custom' => [
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],
@@ -114,8 +143,6 @@ return [
     |
     */
 
-    'attributes'           => [
-        //
+    'attributes' => [
     ],
-
 ];

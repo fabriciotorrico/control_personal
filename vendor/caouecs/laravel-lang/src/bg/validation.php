@@ -1,7 +1,6 @@
 <?php
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Validation Language Lines
@@ -9,7 +8,7 @@ return [
     |
     | The following language lines contain the default error messages used by
     | the validator class. Some of these rules have multiple versions such
-    | such as the size rules. Feel free to tweak each of these messages.
+    | as the size rules. Feel free to tweak each of these messages.
     |
     */
 
@@ -32,6 +31,7 @@ return [
     'boolean'              => 'Полето :attribute трябва да съдържа Да или Не',
     'confirmed'            => 'Полето :attribute не е потвърдено.',
     'date'                 => 'Полето :attribute не е валидна дата.',
+    'date_equals'          => 'The :attribute must be a date equal to :date.',
     'date_format'          => 'Полето :attribute не е във формат :format.',
     'different'            => 'Полетата :attribute и :other трябва да са различни.',
     'digits'               => 'Полето :attribute трябва да има :digits цифри.',
@@ -40,14 +40,40 @@ return [
     'distinct'             => 'Данните в полето :attribute се дублират.',
     'email'                => 'Полето :attribute е в невалиден формат.',
     'exists'               => 'Избранато поле :attribute вече съществува.',
-    'file'                 => 'The :attribute must be a file.',
+    'file'                 => 'Полето :attribute трябва да бъде файл.',
     'filled'               => 'Полето :attribute е задължително.',
+    'gt'                   => [
+        'numeric' => 'The :attribute must be greater than :value.',
+        'file'    => 'The :attribute must be greater than :value kilobytes.',
+        'string'  => 'The :attribute must be greater than :value characters.',
+        'array'   => 'The :attribute must have more than :value items.',
+    ],
+    'gte'                  => [
+        'numeric' => 'The :attribute must be greater than or equal :value.',
+        'file'    => 'The :attribute must be greater than or equal :value kilobytes.',
+        'string'  => 'The :attribute must be greater than or equal :value characters.',
+        'array'   => 'The :attribute must have :value items or more.',
+    ],
     'image'                => 'Полето :attribute трябва да бъде изображение.',
     'in'                   => 'Избраното поле :attribute е невалидно.',
-    'in_array'             => 'The :attribute field does not exist in :other.',
+    'in_array'             => 'Полето :attribute не съществува в :other.',
     'integer'              => 'Полето :attribute трябва да бъде цяло число.',
     'ip'                   => 'Полето :attribute трябва да бъде IP адрес.',
+    'ipv4'                 => 'Полето :attribute трябва да бъде IPv4 адрес.',
+    'ipv6'                 => 'Полето :attribute трябва да бъде IPv6 адрес.',
     'json'                 => 'Полето :attribute трябва да бъде JSON низ.',
+    'lt'                   => [
+        'numeric' => 'The :attribute must be less than :value.',
+        'file'    => 'The :attribute must be less than :value kilobytes.',
+        'string'  => 'The :attribute must be less than :value characters.',
+        'array'   => 'The :attribute must have less than :value items.',
+    ],
+    'lte'                  => [
+        'numeric' => 'The :attribute must be less than or equal :value.',
+        'file'    => 'The :attribute must be less than or equal :value kilobytes.',
+        'string'  => 'The :attribute must be less than or equal :value characters.',
+        'array'   => 'The :attribute must not have more than :value items.',
+    ],
     'max'                  => [
         'numeric' => 'Полето :attribute трябва да бъде по-малко от :max.',
         'file'    => 'Полето :attribute трябва да бъде по-малко от :max килобайта.',
@@ -63,12 +89,13 @@ return [
         'array'   => 'Полето :attribute трябва има минимум :min елемента.',
     ],
     'not_in'               => 'Избраното поле :attribute е невалидно.',
+    'not_regex'            => 'The :attribute format is invalid.',
     'numeric'              => 'Полето :attribute трябва да бъде число.',
     'present'              => 'Полето :attribute трябва да съествува.',
     'regex'                => 'Полето :attribute е в невалиден формат.',
     'required'             => 'Полето :attribute е задължително.',
     'required_if'          => 'Полето :attribute се изисква, когато :other е :value.',
-    'required_unless'      => 'The :attribute field is required unless :other is in :values.',
+    'required_unless'      => 'Полето :attribute се изисква, освен ако :other не е в :values.',
     'required_with'        => 'Полето :attribute се изисква, когато :values има стойност.',
     'required_with_all'    => 'Полето :attribute е задължително, когато :values имат стойност.',
     'required_without'     => 'Полето :attribute се изисква, когато :values няма стойност.',
@@ -80,11 +107,13 @@ return [
         'string'  => 'Полето :attribute трябва да бъде :size знака.',
         'array'   => 'Полето :attribute трябва да има :size елемента.',
     ],
+    'starts_with'          => 'The :attribute must start with one of the following: :values',
     'string'               => 'Полето :attribute трябва да бъде знаков низ.',
     'timezone'             => 'Полето :attribute трябва да съдържа валидна часова зона.',
     'unique'               => 'Полето :attribute вече съществува.',
     'uploaded'             => 'Неуспешно качване на :attribute.',
     'url'                  => 'Полето :attribute е в невалиден формат.',
+    'uuid'                 => 'The :attribute must be a valid UUID.',
 
     /*
     |--------------------------------------------------------------------------
@@ -97,7 +126,7 @@ return [
     |
     */
 
-    'custom'               => [
+    'custom' => [
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],
@@ -114,7 +143,7 @@ return [
     |
     */
 
-    'attributes'           => [
+    'attributes' => [
         'name'                     => 'Име',
         'username'                 => 'Потребител',
         'email'                    => 'E-mail',
@@ -147,5 +176,4 @@ return [
         'subject'                  => 'Заглавие',
         'message'                  => 'Съобщение',
     ],
-
 ];

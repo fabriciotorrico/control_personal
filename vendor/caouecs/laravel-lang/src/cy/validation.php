@@ -1,7 +1,6 @@
 <?php
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Validation Language Lines
@@ -32,6 +31,7 @@ return [
     'boolean'              => "Rhaid i'r maes :attribute fod yn wir neu gau.",
     'confirmed'            => "Nid yw'r cadarnhad :attribute yn gyfwerth.",
     'date'                 => 'Nid yw :attribute yn ddyddiad dilys.',
+    'date_equals'          => 'The :attribute must be a date equal to :date.',
     'date_format'          => 'Nid yw :attribute yn y fformat :format.',
     'different'            => 'Rhaid i :attribute a :other fod yn wahanol.',
     'digits'               => 'Rhaid i :attribute fod yn :digits digid.',
@@ -42,12 +42,38 @@ return [
     'file'                 => 'The :attribute must be a file.',
     'filled'               => 'Rhaid cynnwys :attribute.',
     'exists'               => 'Nid yw :attribute yn ddilys.',
+    'gt'                   => [
+        'numeric' => 'The :attribute must be greater than :value.',
+        'file'    => 'The :attribute must be greater than :value kilobytes.',
+        'string'  => 'The :attribute must be greater than :value characters.',
+        'array'   => 'The :attribute must have more than :value items.',
+    ],
+    'gte'                  => [
+        'numeric' => 'The :attribute must be greater than or equal :value.',
+        'file'    => 'The :attribute must be greater than or equal :value kilobytes.',
+        'string'  => 'The :attribute must be greater than or equal :value characters.',
+        'array'   => 'The :attribute must have :value items or more.',
+    ],
     'image'                => 'Rhaid i :attribute fod yn lun.',
     'in'                   => 'Nid yw :attribute yn ddilys.',
     'in_array'             => 'The :attribute field does not exist in :other.',
     'integer'              => 'Rhaid i :attribute fod yn integer.',
     'ip'                   => 'Rhaid i :attribute fod yn gyfeiriad IP dilys.',
+    'ipv4'                 => 'The :attribute must be a valid IPv4 address.',
+    'ipv6'                 => 'The :attribute must be a valid IPv6 address.',
     'json'                 => 'The :attribute must be a valid JSON string.',
+    'lt'                   => [
+        'numeric' => 'The :attribute must be less than :value.',
+        'file'    => 'The :attribute must be less than :value kilobytes.',
+        'string'  => 'The :attribute must be less than :value characters.',
+        'array'   => 'The :attribute must have less than :value items.',
+    ],
+    'lte'                  => [
+        'numeric' => 'The :attribute must be less than or equal :value.',
+        'file'    => 'The :attribute must be less than or equal :value kilobytes.',
+        'string'  => 'The :attribute must be less than or equal :value characters.',
+        'array'   => 'The :attribute must not have more than :value items.',
+    ],
     'max'                  => [
         'numeric' => 'Ni chai :attribute fod yn fwy na :max.',
         'file'    => 'Ni chai :attribute fod yn fwy na :max kilobytes.',
@@ -63,6 +89,7 @@ return [
         'array'   => 'Rhaid i :attribute fod o leiaf :min eitem.',
     ],
     'not_in'               => 'Nid yw :attribute yn ddilys.',
+    'not_regex'            => 'The :attribute format is invalid.',
     'numeric'              => 'Rhaid i :attribute fod yn rif.',
     'present'              => 'The :attribute field must be present.',
     'regex'                => 'Nid yw fformat :attribute yn ddilys.',
@@ -80,11 +107,13 @@ return [
         'string'  => 'Rhaid i :attribute fod yn :size nodyn.',
         'array'   => 'Rhaid i :attribute fod yn :size eitem.',
     ],
+    'starts_with'          => 'The :attribute must start with one of the following: :values',
     'string'               => 'The :attribute must be a string.',
     'timezone'             => 'Rhaid i :attribute fod yn timezone dilys.',
     'unique'               => 'Mae :attribute eisoes yn bodoli.',
     'uploaded'             => 'The :attribute failed to upload.',
     'url'                  => 'Nid yw fformat :attribute yn ddilys.',
+    'uuid'                 => 'The :attribute must be a valid UUID.',
 
     /*
     |--------------------------------------------------------------------------
@@ -97,7 +126,7 @@ return [
     |
     */
 
-    'custom'               => [
+    'custom' => [
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],
@@ -114,8 +143,6 @@ return [
     |
     */
 
-    'attributes'           => [
-        //
+    'attributes' => [
     ],
-
 ];
