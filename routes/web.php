@@ -113,17 +113,15 @@ Route::group(['middleware' => 'cors'], function () {
 Route::group(['middleware' => 'auth'], function () {
 
     Route::get('home_partes', 'PartesDiariosController@home_partes');
-<<<<<<< HEAD
+
     Route::get('form_llenar_parte_diario', 'PartesDiariosController@form_llenar_parte_diario');
     Route::post('crear_parte_diario', 'PartesDiariosController@crear_parte_diario');
-=======
-    Route::post('form_llenar_parte_diario', 'PartesDiariosController@form_llenar_parte_diario');
+
     Route::get('form_reportes', 'PartesDiariosController@form_reportes');
     Route::post('form_parte_igm', 'PartesDiariosController@form_parte_igm');
     Route::post('parte_igm', 'PartesDiariosController@parte_igm')->name('parte_igm');
     Route::post('form_parte_por_departamento', 'PartesDiariosController@form_parte_por_departamento');
     Route::post('parte_por_departamento', 'PartesDiariosController@parte_por_departamento')->name('parte_por_departamento');
->>>>>>> b1e6fe831680d4ac6e15ec76639e68efeb2ea2a1
 
 
 

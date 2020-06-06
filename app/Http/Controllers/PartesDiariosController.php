@@ -8,12 +8,11 @@ use App\Models\Partes\ParteDiario;
 use App\Persona;
 use Illuminate\Support\Facades\Auth;
 use DateTime;
-<<<<<<< HEAD
+
 use Carbon\Carbon;
-=======
+
 //use Fpdf;
-//use Carbon;
->>>>>>> b1e6fe831680d4ac6e15ec76639e68efeb2ea2a1
+
 
 class PartesDiariosController extends Controller
 {
@@ -29,8 +28,8 @@ class PartesDiariosController extends Controller
         $fecha_actual = $tiempo_actual->toDateString();
 
         $horario = \DB::table('partes_horarios')
-        ->where('desde', '<=', $tiempo_actual->toTimeString())
-        ->where('hasta', '>=', $tiempo_actual->toTimeString())
+        ->where('hora_desde', '<=', $tiempo_actual->toTimeString())
+        ->where('hora_hasta', '>=', $tiempo_actual->toTimeString())
         ->where('activo', 1)->first();
 
         if ($horario == null) {
@@ -70,7 +69,7 @@ class PartesDiariosController extends Controller
               ->with('fecha_actual', $fecha_actual);
     }
 
-<<<<<<< HEAD
+
     public function crear_parte_diario(Request $request){
         // dd($request->all());
 
@@ -86,8 +85,8 @@ class PartesDiariosController extends Controller
         $tiempo_actual = Carbon::now();
 
         $horario = \DB::table('partes_horarios')
-        ->where('desde', '<=', $tiempo_actual->toTimeString())
-        ->where('hasta', '>=', $tiempo_actual->toTimeString())
+        ->where('hora_desde', '<=', $tiempo_actual->toTimeString())
+        ->where('hora_hasta', '>=', $tiempo_actual->toTimeString())
         ->where('activo', 1)->first();
 
         if ($horario == null) {
@@ -129,7 +128,7 @@ class PartesDiariosController extends Controller
 
         return redirect('/home_partes')->with('mensaje_exito', 'Información guardada correctamente');
     }
-=======
+
     public function form_reportes(){
         return view("formularios.partes.form_reportes");
     }
@@ -245,5 +244,5 @@ class PartesDiariosController extends Controller
                ->stream('parte_por_departamento.pdf');
   return $pdf;
 }
->>>>>>> b1e6fe831680d4ac6e15ec76639e68efeb2ea2a1
+
 }

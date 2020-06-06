@@ -9,8 +9,6 @@ return array(
     'Absolute_Positioner' => $vendorDir . '/dompdf/dompdf/include/absolute_positioner.cls.php',
     'Abstract_Renderer' => $vendorDir . '/dompdf/dompdf/include/abstract_renderer.cls.php',
     'Adobe_Font_Metrics' => $vendorDir . '/phenx/php-font-lib/classes/Adobe_Font_Metrics.php',
-<<<<<<< HEAD
-=======
     'App\\Area' => $baseDir . '/app/Area.php',
     'App\\Artesania' => $baseDir . '/app/Artesania.php',
     'App\\Calendario' => $baseDir . '/app/Calendario.php',
@@ -113,7 +111,6 @@ return array(
     'App\\Votos_Presidenciales_r' => $baseDir . '/app/Votos_Presidenciales_r.php',
     'App\\Votos_Uninominales' => $baseDir . '/app/Votos_Uninominales.php',
     'App\\Votos_Uninominales_r' => $baseDir . '/app/Votos_Uninominales_r.php',
->>>>>>> b1e6fe831680d4ac6e15ec76639e68efeb2ea2a1
     'Attribute_Translator' => $vendorDir . '/dompdf/dompdf/include/attribute_translator.cls.php',
     'Barryvdh\\Snappy\\Facades\\SnappyImage' => $vendorDir . '/barryvdh/laravel-snappy/src/Facades/SnappyImage.php',
     'Barryvdh\\Snappy\\Facades\\SnappyPdf' => $vendorDir . '/barryvdh/laravel-snappy/src/Facades/SnappyPdf.php',
@@ -130,10 +127,6 @@ return array(
     'CPDF_Adapter' => $vendorDir . '/dompdf/dompdf/include/cpdf_adapter.cls.php',
     'CSS_Color' => $vendorDir . '/dompdf/dompdf/include/css_color.cls.php',
     'Cached_PDF_Decorator' => $vendorDir . '/dompdf/dompdf/include/cached_pdf_decorator.cls.php',
-<<<<<<< HEAD
-    'Canvas' => $vendorDir . '/dompdf/dompdf/include/canvas.cls.php',
-    'Canvas_Factory' => $vendorDir . '/dompdf/dompdf/include/canvas_factory.cls.php',
-=======
     'Caffeinated\\Shinobi\\Facades\\Shinobi' => $vendorDir . '/caffeinated/shinobi/src/Facades/Shinobi.php',
     'Caffeinated\\Shinobi\\Middleware\\UserHasPermission' => $vendorDir . '/caffeinated/shinobi/src/Middleware/UserHasPermission.php',
     'Caffeinated\\Shinobi\\Middleware\\UserHasRole' => $vendorDir . '/caffeinated/shinobi/src/Middleware/UserHasRole.php',
@@ -152,16 +145,12 @@ return array(
     'Carbon\\Laravel\\ServiceProvider' => $vendorDir . '/nesbot/carbon/src/Carbon/Laravel/ServiceProvider.php',
     'Carbon\\Translator' => $vendorDir . '/nesbot/carbon/src/Carbon/Translator.php',
     'Carbon\\Upgrade' => $vendorDir . '/nesbot/carbon/src/Carbon/Upgrade.php',
->>>>>>> b1e6fe831680d4ac6e15ec76639e68efeb2ea2a1
     'Cellmap' => $vendorDir . '/dompdf/dompdf/include/cellmap.cls.php',
     'CreateRecintosTable' => $baseDir . '/database/migrations/2019_08_12_000000_create_mesas_table.php',
     'DOMPDF' => $vendorDir . '/dompdf/dompdf/include/dompdf.cls.php',
     'DOMPDF_Exception' => $vendorDir . '/dompdf/dompdf/include/dompdf_exception.cls.php',
     'DOMPDF_Image_Exception' => $vendorDir . '/dompdf/dompdf/include/dompdf_image_exception.cls.php',
     'DatabaseSeeder' => $baseDir . '/database/seeds/DatabaseSeeder.php',
-<<<<<<< HEAD
-    'Encoding_Map' => $vendorDir . '/phenx/php-font-lib/classes/Encoding_Map.php',
-=======
     'DeepCopy\\DeepCopy' => $vendorDir . '/myclabs/deep-copy/src/DeepCopy/DeepCopy.php',
     'DeepCopy\\Exception\\CloneException' => $vendorDir . '/myclabs/deep-copy/src/DeepCopy/Exception/CloneException.php',
     'DeepCopy\\Exception\\PropertyException' => $vendorDir . '/myclabs/deep-copy/src/DeepCopy/Exception/PropertyException.php',
@@ -695,7 +684,6 @@ return array(
     'Faker\\Provider\\zh_TW\\Text' => $vendorDir . '/fzaninotto/faker/src/Faker/Provider/zh_TW/Text.php',
     'Faker\\UniqueGenerator' => $vendorDir . '/fzaninotto/faker/src/Faker/UniqueGenerator.php',
     'Faker\\ValidGenerator' => $vendorDir . '/fzaninotto/faker/src/Faker/ValidGenerator.php',
->>>>>>> b1e6fe831680d4ac6e15ec76639e68efeb2ea2a1
     'File_Iterator' => $vendorDir . '/phpunit/php-file-iterator/src/Iterator.php',
     'File_Iterator_Facade' => $vendorDir . '/phpunit/php-file-iterator/src/Facade.php',
     'File_Iterator_Factory' => $vendorDir . '/phpunit/php-file-iterator/src/Factory.php',
@@ -819,9 +807,6 @@ return array(
     'Inline_Frame_Reflower' => $vendorDir . '/dompdf/dompdf/include/inline_frame_reflower.cls.php',
     'Inline_Positioner' => $vendorDir . '/dompdf/dompdf/include/inline_positioner.cls.php',
     'Inline_Renderer' => $vendorDir . '/dompdf/dompdf/include/inline_renderer.cls.php',
-<<<<<<< HEAD
-    'Javascript_Embedder' => $vendorDir . '/dompdf/dompdf/include/javascript_embedder.cls.php',
-=======
     'Intervention\\Image\\AbstractColor' => $vendorDir . '/intervention/image/src/Intervention/Image/AbstractColor.php',
     'Intervention\\Image\\AbstractDecoder' => $vendorDir . '/intervention/image/src/Intervention/Image/AbstractDecoder.php',
     'Intervention\\Image\\AbstractDriver' => $vendorDir . '/intervention/image/src/Intervention/Image/AbstractDriver.php',
@@ -1033,7 +1018,6 @@ return array(
     'League\\Fractal\\Serializer\\Serializer' => $vendorDir . '/league/fractal/src/Serializer/Serializer.php',
     'League\\Fractal\\Serializer\\SerializerAbstract' => $vendorDir . '/league/fractal/src/Serializer/SerializerAbstract.php',
     'League\\Fractal\\TransformerAbstract' => $vendorDir . '/league/fractal/src/TransformerAbstract.php',
->>>>>>> b1e6fe831680d4ac6e15ec76639e68efeb2ea2a1
     'Line_Box' => $vendorDir . '/dompdf/dompdf/include/line_box.cls.php',
     'List_Bullet_Frame_Decorator' => $vendorDir . '/dompdf/dompdf/include/list_bullet_frame_decorator.cls.php',
     'List_Bullet_Frame_Reflower' => $vendorDir . '/dompdf/dompdf/include/list_bullet_frame_reflower.cls.php',
@@ -1068,8 +1052,6 @@ return array(
     'Maatwebsite\\Excel\\Readers\\LaravelExcelReader' => $vendorDir . '/maatwebsite/excel/src/Maatwebsite/Excel/Readers/LaravelExcelReader.php',
     'Maatwebsite\\Excel\\Writers\\CellWriter' => $vendorDir . '/maatwebsite/excel/src/Maatwebsite/Excel/Writers/CellWriter.php',
     'Maatwebsite\\Excel\\Writers\\LaravelExcelWriter' => $vendorDir . '/maatwebsite/excel/src/Maatwebsite/Excel/Writers/LaravelExcelWriter.php',
-<<<<<<< HEAD
-=======
     'MaddHatter\\LaravelFullcalendar\\Calendar' => $vendorDir . '/maddhatter/laravel-fullcalendar/src/MaddHatter/LaravelFullcalendar/Calendar.php',
     'MaddHatter\\LaravelFullcalendar\\Event' => $vendorDir . '/maddhatter/laravel-fullcalendar/src/MaddHatter/LaravelFullcalendar/Event.php',
     'MaddHatter\\LaravelFullcalendar\\EventCollection' => $vendorDir . '/maddhatter/laravel-fullcalendar/src/MaddHatter/LaravelFullcalendar/EventCollection.php',
@@ -1240,13 +1222,10 @@ return array(
     'Monolog\\ResettableInterface' => $vendorDir . '/monolog/monolog/src/Monolog/ResettableInterface.php',
     'Monolog\\SignalHandler' => $vendorDir . '/monolog/monolog/src/Monolog/SignalHandler.php',
     'Monolog\\Utils' => $vendorDir . '/monolog/monolog/src/Monolog/Utils.php',
->>>>>>> b1e6fe831680d4ac6e15ec76639e68efeb2ea2a1
     'Null_Frame_Decorator' => $vendorDir . '/dompdf/dompdf/include/null_frame_decorator.cls.php',
     'Null_Frame_Reflower' => $vendorDir . '/dompdf/dompdf/include/null_frame_reflower.cls.php',
     'Null_Positioner' => $vendorDir . '/dompdf/dompdf/include/null_positioner.cls.php',
     'PDFLib_Adapter' => $vendorDir . '/dompdf/dompdf/include/pdflib_adapter.cls.php',
-<<<<<<< HEAD
-=======
     'PHPExcel' => $vendorDir . '/phpoffice/phpexcel/Classes/PHPExcel.php',
     'PHPExcel_Autoloader' => $vendorDir . '/phpoffice/phpexcel/Classes/PHPExcel/Autoloader.php',
     'PHPExcel_Best_Fit' => $vendorDir . '/phpoffice/phpexcel/Classes/PHPExcel/Shared/trend/bestFitClass.php',
@@ -1455,7 +1434,6 @@ return array(
     'PHPExcel_Writer_PDF_DomPDF' => $vendorDir . '/phpoffice/phpexcel/Classes/PHPExcel/Writer/PDF/DomPDF.php',
     'PHPExcel_Writer_PDF_mPDF' => $vendorDir . '/phpoffice/phpexcel/Classes/PHPExcel/Writer/PDF/mPDF.php',
     'PHPExcel_Writer_PDF_tcPDF' => $vendorDir . '/phpoffice/phpexcel/Classes/PHPExcel/Writer/PDF/tcPDF.php',
->>>>>>> b1e6fe831680d4ac6e15ec76639e68efeb2ea2a1
     'PHPUnit\\Framework\\Assert' => $vendorDir . '/phpunit/phpunit/src/ForwardCompatibility/Assert.php',
     'PHPUnit\\Framework\\AssertionFailedError' => $vendorDir . '/phpunit/phpunit/src/ForwardCompatibility/AssertionFailedError.php',
     'PHPUnit\\Framework\\BaseTestListener' => $vendorDir . '/phpunit/phpunit/src/ForwardCompatibility/BaseTestListener.php',
@@ -1843,8 +1821,6 @@ return array(
     'Page_Frame_Decorator' => $vendorDir . '/dompdf/dompdf/include/page_frame_decorator.cls.php',
     'Page_Frame_Reflower' => $vendorDir . '/dompdf/dompdf/include/page_frame_reflower.cls.php',
     'Positioner' => $vendorDir . '/dompdf/dompdf/include/positioner.cls.php',
-<<<<<<< HEAD
-=======
     'Prophecy\\Argument' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Argument.php',
     'Prophecy\\Argument\\ArgumentsWildcard' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Argument/ArgumentsWildcard.php',
     'Prophecy\\Argument\\Token\\AnyValueToken' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Argument/Token/AnyValueToken.php',
@@ -2128,7 +2104,6 @@ return array(
     'Ramsey\\Uuid\\UuidFactory' => $vendorDir . '/ramsey/uuid/src/UuidFactory.php',
     'Ramsey\\Uuid\\UuidFactoryInterface' => $vendorDir . '/ramsey/uuid/src/UuidFactoryInterface.php',
     'Ramsey\\Uuid\\UuidInterface' => $vendorDir . '/ramsey/uuid/src/UuidInterface.php',
->>>>>>> b1e6fe831680d4ac6e15ec76639e68efeb2ea2a1
     'Renderer' => $vendorDir . '/dompdf/dompdf/include/renderer.cls.php',
     'SebastianBergmann\\CodeCoverage\\CodeCoverage' => $vendorDir . '/phpunit/php-code-coverage/src/CodeCoverage.php',
     'SebastianBergmann\\CodeCoverage\\CoveredCodeNotExecutedException' => $vendorDir . '/phpunit/php-code-coverage/src/Exception/CoveredCodeNotExecutedException.php',
@@ -2211,8 +2186,6 @@ return array(
     'SebastianBergmann\\Version' => $vendorDir . '/sebastian/version/src/Version.php',
     'Style' => $vendorDir . '/dompdf/dompdf/include/style.cls.php',
     'Stylesheet' => $vendorDir . '/dompdf/dompdf/include/stylesheet.cls.php',
-<<<<<<< HEAD
-=======
     'SuperClosure\\Analyzer\\AstAnalyzer' => $vendorDir . '/jeremeamia/superclosure/src/Analyzer/AstAnalyzer.php',
     'SuperClosure\\Analyzer\\ClosureAnalyzer' => $vendorDir . '/jeremeamia/superclosure/src/Analyzer/ClosureAnalyzer.php',
     'SuperClosure\\Analyzer\\Token' => $vendorDir . '/jeremeamia/superclosure/src/Analyzer/Token.php',
@@ -2754,7 +2727,6 @@ return array(
     'Symfony\\Polyfill\\Util\\TestListenerForV6' => $vendorDir . '/symfony/polyfill-util/TestListenerForV6.php',
     'Symfony\\Polyfill\\Util\\TestListenerForV7' => $vendorDir . '/symfony/polyfill-util/TestListenerForV7.php',
     'Symfony\\Polyfill\\Util\\TestListenerTrait' => $vendorDir . '/symfony/polyfill-util/TestListenerTrait.php',
->>>>>>> b1e6fe831680d4ac6e15ec76639e68efeb2ea2a1
     'TCPDF_Adapter' => $vendorDir . '/dompdf/dompdf/include/tcpdf_adapter.cls.php',
     'Table_Cell_Frame_Decorator' => $vendorDir . '/dompdf/dompdf/include/table_cell_frame_decorator.cls.php',
     'Table_Cell_Frame_Reflower' => $vendorDir . '/dompdf/dompdf/include/table_cell_frame_reflower.cls.php',
@@ -2773,8 +2745,6 @@ return array(
     'Text_Frame_Reflower' => $vendorDir . '/dompdf/dompdf/include/text_frame_reflower.cls.php',
     'Text_Renderer' => $vendorDir . '/dompdf/dompdf/include/text_renderer.cls.php',
     'Text_Template' => $vendorDir . '/phpunit/php-text-template/src/Template.php',
-<<<<<<< HEAD
-=======
     'TijsVerkoyen\\CssToInlineStyles\\CssToInlineStyles' => $vendorDir . '/tijsverkoyen/css-to-inline-styles/src/CssToInlineStyles.php',
     'TijsVerkoyen\\CssToInlineStyles\\Css\\Processor' => $vendorDir . '/tijsverkoyen/css-to-inline-styles/src/Css/Processor.php',
     'TijsVerkoyen\\CssToInlineStyles\\Css\\Property\\Processor' => $vendorDir . '/tijsverkoyen/css-to-inline-styles/src/Css/Property/Processor.php',
@@ -2880,5 +2850,4 @@ return array(
     'phpDocumentor\\Reflection\\Types\\String_' => $vendorDir . '/phpdocumentor/type-resolver/src/Types/String_.php',
     'phpDocumentor\\Reflection\\Types\\This' => $vendorDir . '/phpdocumentor/type-resolver/src/Types/This.php',
     'phpDocumentor\\Reflection\\Types\\Void_' => $vendorDir . '/phpdocumentor/type-resolver/src/Types/Void_.php',
->>>>>>> b1e6fe831680d4ac6e15ec76639e68efeb2ea2a1
 );

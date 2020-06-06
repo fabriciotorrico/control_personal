@@ -429,8 +429,6 @@ class ComposerStaticInitfbe6cd255cb4cec8e64af0c608619820
         'Absolute_Positioner' => __DIR__ . '/..' . '/dompdf/dompdf/include/absolute_positioner.cls.php',
         'Abstract_Renderer' => __DIR__ . '/..' . '/dompdf/dompdf/include/abstract_renderer.cls.php',
         'Adobe_Font_Metrics' => __DIR__ . '/..' . '/phenx/php-font-lib/classes/Adobe_Font_Metrics.php',
-<<<<<<< HEAD
-=======
         'App\\Area' => __DIR__ . '/../..' . '/app/Area.php',
         'App\\Artesania' => __DIR__ . '/../..' . '/app/Artesania.php',
         'App\\Calendario' => __DIR__ . '/../..' . '/app/Calendario.php',
@@ -533,7 +531,6 @@ class ComposerStaticInitfbe6cd255cb4cec8e64af0c608619820
         'App\\Votos_Presidenciales_r' => __DIR__ . '/../..' . '/app/Votos_Presidenciales_r.php',
         'App\\Votos_Uninominales' => __DIR__ . '/../..' . '/app/Votos_Uninominales.php',
         'App\\Votos_Uninominales_r' => __DIR__ . '/../..' . '/app/Votos_Uninominales_r.php',
->>>>>>> b1e6fe831680d4ac6e15ec76639e68efeb2ea2a1
         'Attribute_Translator' => __DIR__ . '/..' . '/dompdf/dompdf/include/attribute_translator.cls.php',
         'Barryvdh\\Snappy\\Facades\\SnappyImage' => __DIR__ . '/..' . '/barryvdh/laravel-snappy/src/Facades/SnappyImage.php',
         'Barryvdh\\Snappy\\Facades\\SnappyPdf' => __DIR__ . '/..' . '/barryvdh/laravel-snappy/src/Facades/SnappyPdf.php',
@@ -550,10 +547,8 @@ class ComposerStaticInitfbe6cd255cb4cec8e64af0c608619820
         'CPDF_Adapter' => __DIR__ . '/..' . '/dompdf/dompdf/include/cpdf_adapter.cls.php',
         'CSS_Color' => __DIR__ . '/..' . '/dompdf/dompdf/include/css_color.cls.php',
         'Cached_PDF_Decorator' => __DIR__ . '/..' . '/dompdf/dompdf/include/cached_pdf_decorator.cls.php',
-<<<<<<< HEAD
         'Canvas' => __DIR__ . '/..' . '/dompdf/dompdf/include/canvas.cls.php',
         'Canvas_Factory' => __DIR__ . '/..' . '/dompdf/dompdf/include/canvas_factory.cls.php',
-=======
         'Caffeinated\\Shinobi\\Facades\\Shinobi' => __DIR__ . '/..' . '/caffeinated/shinobi/src/Facades/Shinobi.php',
         'Caffeinated\\Shinobi\\Middleware\\UserHasPermission' => __DIR__ . '/..' . '/caffeinated/shinobi/src/Middleware/UserHasPermission.php',
         'Caffeinated\\Shinobi\\Middleware\\UserHasRole' => __DIR__ . '/..' . '/caffeinated/shinobi/src/Middleware/UserHasRole.php',
@@ -572,16 +567,13 @@ class ComposerStaticInitfbe6cd255cb4cec8e64af0c608619820
         'Carbon\\Laravel\\ServiceProvider' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Laravel/ServiceProvider.php',
         'Carbon\\Translator' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Translator.php',
         'Carbon\\Upgrade' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Upgrade.php',
->>>>>>> b1e6fe831680d4ac6e15ec76639e68efeb2ea2a1
         'Cellmap' => __DIR__ . '/..' . '/dompdf/dompdf/include/cellmap.cls.php',
         'CreateRecintosTable' => __DIR__ . '/../..' . '/database/migrations/2019_08_12_000000_create_mesas_table.php',
         'DOMPDF' => __DIR__ . '/..' . '/dompdf/dompdf/include/dompdf.cls.php',
         'DOMPDF_Exception' => __DIR__ . '/..' . '/dompdf/dompdf/include/dompdf_exception.cls.php',
         'DOMPDF_Image_Exception' => __DIR__ . '/..' . '/dompdf/dompdf/include/dompdf_image_exception.cls.php',
         'DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeds/DatabaseSeeder.php',
-<<<<<<< HEAD
         'Encoding_Map' => __DIR__ . '/..' . '/phenx/php-font-lib/classes/Encoding_Map.php',
-=======
         'DeepCopy\\DeepCopy' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/DeepCopy.php',
         'DeepCopy\\Exception\\CloneException' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/Exception/CloneException.php',
         'DeepCopy\\Exception\\PropertyException' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/Exception/PropertyException.php',
@@ -1115,7 +1107,6 @@ class ComposerStaticInitfbe6cd255cb4cec8e64af0c608619820
         'Faker\\Provider\\zh_TW\\Text' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/zh_TW/Text.php',
         'Faker\\UniqueGenerator' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/UniqueGenerator.php',
         'Faker\\ValidGenerator' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/ValidGenerator.php',
->>>>>>> b1e6fe831680d4ac6e15ec76639e68efeb2ea2a1
         'File_Iterator' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Iterator.php',
         'File_Iterator_Facade' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Facade.php',
         'File_Iterator_Factory' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Factory.php',
@@ -1239,9 +1230,7 @@ class ComposerStaticInitfbe6cd255cb4cec8e64af0c608619820
         'Inline_Frame_Reflower' => __DIR__ . '/..' . '/dompdf/dompdf/include/inline_frame_reflower.cls.php',
         'Inline_Positioner' => __DIR__ . '/..' . '/dompdf/dompdf/include/inline_positioner.cls.php',
         'Inline_Renderer' => __DIR__ . '/..' . '/dompdf/dompdf/include/inline_renderer.cls.php',
-<<<<<<< HEAD
         'Javascript_Embedder' => __DIR__ . '/..' . '/dompdf/dompdf/include/javascript_embedder.cls.php',
-=======
         'Intervention\\Image\\AbstractColor' => __DIR__ . '/..' . '/intervention/image/src/Intervention/Image/AbstractColor.php',
         'Intervention\\Image\\AbstractDecoder' => __DIR__ . '/..' . '/intervention/image/src/Intervention/Image/AbstractDecoder.php',
         'Intervention\\Image\\AbstractDriver' => __DIR__ . '/..' . '/intervention/image/src/Intervention/Image/AbstractDriver.php',
@@ -1453,7 +1442,6 @@ class ComposerStaticInitfbe6cd255cb4cec8e64af0c608619820
         'League\\Fractal\\Serializer\\Serializer' => __DIR__ . '/..' . '/league/fractal/src/Serializer/Serializer.php',
         'League\\Fractal\\Serializer\\SerializerAbstract' => __DIR__ . '/..' . '/league/fractal/src/Serializer/SerializerAbstract.php',
         'League\\Fractal\\TransformerAbstract' => __DIR__ . '/..' . '/league/fractal/src/TransformerAbstract.php',
->>>>>>> b1e6fe831680d4ac6e15ec76639e68efeb2ea2a1
         'Line_Box' => __DIR__ . '/..' . '/dompdf/dompdf/include/line_box.cls.php',
         'List_Bullet_Frame_Decorator' => __DIR__ . '/..' . '/dompdf/dompdf/include/list_bullet_frame_decorator.cls.php',
         'List_Bullet_Frame_Reflower' => __DIR__ . '/..' . '/dompdf/dompdf/include/list_bullet_frame_reflower.cls.php',
@@ -1488,8 +1476,6 @@ class ComposerStaticInitfbe6cd255cb4cec8e64af0c608619820
         'Maatwebsite\\Excel\\Readers\\LaravelExcelReader' => __DIR__ . '/..' . '/maatwebsite/excel/src/Maatwebsite/Excel/Readers/LaravelExcelReader.php',
         'Maatwebsite\\Excel\\Writers\\CellWriter' => __DIR__ . '/..' . '/maatwebsite/excel/src/Maatwebsite/Excel/Writers/CellWriter.php',
         'Maatwebsite\\Excel\\Writers\\LaravelExcelWriter' => __DIR__ . '/..' . '/maatwebsite/excel/src/Maatwebsite/Excel/Writers/LaravelExcelWriter.php',
-<<<<<<< HEAD
-=======
         'MaddHatter\\LaravelFullcalendar\\Calendar' => __DIR__ . '/..' . '/maddhatter/laravel-fullcalendar/src/MaddHatter/LaravelFullcalendar/Calendar.php',
         'MaddHatter\\LaravelFullcalendar\\Event' => __DIR__ . '/..' . '/maddhatter/laravel-fullcalendar/src/MaddHatter/LaravelFullcalendar/Event.php',
         'MaddHatter\\LaravelFullcalendar\\EventCollection' => __DIR__ . '/..' . '/maddhatter/laravel-fullcalendar/src/MaddHatter/LaravelFullcalendar/EventCollection.php',
@@ -1660,13 +1646,10 @@ class ComposerStaticInitfbe6cd255cb4cec8e64af0c608619820
         'Monolog\\ResettableInterface' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/ResettableInterface.php',
         'Monolog\\SignalHandler' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/SignalHandler.php',
         'Monolog\\Utils' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Utils.php',
->>>>>>> b1e6fe831680d4ac6e15ec76639e68efeb2ea2a1
         'Null_Frame_Decorator' => __DIR__ . '/..' . '/dompdf/dompdf/include/null_frame_decorator.cls.php',
         'Null_Frame_Reflower' => __DIR__ . '/..' . '/dompdf/dompdf/include/null_frame_reflower.cls.php',
         'Null_Positioner' => __DIR__ . '/..' . '/dompdf/dompdf/include/null_positioner.cls.php',
         'PDFLib_Adapter' => __DIR__ . '/..' . '/dompdf/dompdf/include/pdflib_adapter.cls.php',
-<<<<<<< HEAD
-=======
         'PHPExcel' => __DIR__ . '/..' . '/phpoffice/phpexcel/Classes/PHPExcel.php',
         'PHPExcel_Autoloader' => __DIR__ . '/..' . '/phpoffice/phpexcel/Classes/PHPExcel/Autoloader.php',
         'PHPExcel_Best_Fit' => __DIR__ . '/..' . '/phpoffice/phpexcel/Classes/PHPExcel/Shared/trend/bestFitClass.php',
@@ -1875,7 +1858,6 @@ class ComposerStaticInitfbe6cd255cb4cec8e64af0c608619820
         'PHPExcel_Writer_PDF_DomPDF' => __DIR__ . '/..' . '/phpoffice/phpexcel/Classes/PHPExcel/Writer/PDF/DomPDF.php',
         'PHPExcel_Writer_PDF_mPDF' => __DIR__ . '/..' . '/phpoffice/phpexcel/Classes/PHPExcel/Writer/PDF/mPDF.php',
         'PHPExcel_Writer_PDF_tcPDF' => __DIR__ . '/..' . '/phpoffice/phpexcel/Classes/PHPExcel/Writer/PDF/tcPDF.php',
->>>>>>> b1e6fe831680d4ac6e15ec76639e68efeb2ea2a1
         'PHPUnit\\Framework\\Assert' => __DIR__ . '/..' . '/phpunit/phpunit/src/ForwardCompatibility/Assert.php',
         'PHPUnit\\Framework\\AssertionFailedError' => __DIR__ . '/..' . '/phpunit/phpunit/src/ForwardCompatibility/AssertionFailedError.php',
         'PHPUnit\\Framework\\BaseTestListener' => __DIR__ . '/..' . '/phpunit/phpunit/src/ForwardCompatibility/BaseTestListener.php',
@@ -2263,8 +2245,6 @@ class ComposerStaticInitfbe6cd255cb4cec8e64af0c608619820
         'Page_Frame_Decorator' => __DIR__ . '/..' . '/dompdf/dompdf/include/page_frame_decorator.cls.php',
         'Page_Frame_Reflower' => __DIR__ . '/..' . '/dompdf/dompdf/include/page_frame_reflower.cls.php',
         'Positioner' => __DIR__ . '/..' . '/dompdf/dompdf/include/positioner.cls.php',
-<<<<<<< HEAD
-=======
         'Prophecy\\Argument' => __DIR__ . '/..' . '/phpspec/prophecy/src/Prophecy/Argument.php',
         'Prophecy\\Argument\\ArgumentsWildcard' => __DIR__ . '/..' . '/phpspec/prophecy/src/Prophecy/Argument/ArgumentsWildcard.php',
         'Prophecy\\Argument\\Token\\AnyValueToken' => __DIR__ . '/..' . '/phpspec/prophecy/src/Prophecy/Argument/Token/AnyValueToken.php',
@@ -2548,7 +2528,6 @@ class ComposerStaticInitfbe6cd255cb4cec8e64af0c608619820
         'Ramsey\\Uuid\\UuidFactory' => __DIR__ . '/..' . '/ramsey/uuid/src/UuidFactory.php',
         'Ramsey\\Uuid\\UuidFactoryInterface' => __DIR__ . '/..' . '/ramsey/uuid/src/UuidFactoryInterface.php',
         'Ramsey\\Uuid\\UuidInterface' => __DIR__ . '/..' . '/ramsey/uuid/src/UuidInterface.php',
->>>>>>> b1e6fe831680d4ac6e15ec76639e68efeb2ea2a1
         'Renderer' => __DIR__ . '/..' . '/dompdf/dompdf/include/renderer.cls.php',
         'SebastianBergmann\\CodeCoverage\\CodeCoverage' => __DIR__ . '/..' . '/phpunit/php-code-coverage/src/CodeCoverage.php',
         'SebastianBergmann\\CodeCoverage\\CoveredCodeNotExecutedException' => __DIR__ . '/..' . '/phpunit/php-code-coverage/src/Exception/CoveredCodeNotExecutedException.php',
@@ -2631,8 +2610,6 @@ class ComposerStaticInitfbe6cd255cb4cec8e64af0c608619820
         'SebastianBergmann\\Version' => __DIR__ . '/..' . '/sebastian/version/src/Version.php',
         'Style' => __DIR__ . '/..' . '/dompdf/dompdf/include/style.cls.php',
         'Stylesheet' => __DIR__ . '/..' . '/dompdf/dompdf/include/stylesheet.cls.php',
-<<<<<<< HEAD
-=======
         'SuperClosure\\Analyzer\\AstAnalyzer' => __DIR__ . '/..' . '/jeremeamia/superclosure/src/Analyzer/AstAnalyzer.php',
         'SuperClosure\\Analyzer\\ClosureAnalyzer' => __DIR__ . '/..' . '/jeremeamia/superclosure/src/Analyzer/ClosureAnalyzer.php',
         'SuperClosure\\Analyzer\\Token' => __DIR__ . '/..' . '/jeremeamia/superclosure/src/Analyzer/Token.php',
@@ -3174,7 +3151,6 @@ class ComposerStaticInitfbe6cd255cb4cec8e64af0c608619820
         'Symfony\\Polyfill\\Util\\TestListenerForV6' => __DIR__ . '/..' . '/symfony/polyfill-util/TestListenerForV6.php',
         'Symfony\\Polyfill\\Util\\TestListenerForV7' => __DIR__ . '/..' . '/symfony/polyfill-util/TestListenerForV7.php',
         'Symfony\\Polyfill\\Util\\TestListenerTrait' => __DIR__ . '/..' . '/symfony/polyfill-util/TestListenerTrait.php',
->>>>>>> b1e6fe831680d4ac6e15ec76639e68efeb2ea2a1
         'TCPDF_Adapter' => __DIR__ . '/..' . '/dompdf/dompdf/include/tcpdf_adapter.cls.php',
         'Table_Cell_Frame_Decorator' => __DIR__ . '/..' . '/dompdf/dompdf/include/table_cell_frame_decorator.cls.php',
         'Table_Cell_Frame_Reflower' => __DIR__ . '/..' . '/dompdf/dompdf/include/table_cell_frame_reflower.cls.php',
@@ -3193,8 +3169,6 @@ class ComposerStaticInitfbe6cd255cb4cec8e64af0c608619820
         'Text_Frame_Reflower' => __DIR__ . '/..' . '/dompdf/dompdf/include/text_frame_reflower.cls.php',
         'Text_Renderer' => __DIR__ . '/..' . '/dompdf/dompdf/include/text_renderer.cls.php',
         'Text_Template' => __DIR__ . '/..' . '/phpunit/php-text-template/src/Template.php',
-<<<<<<< HEAD
-=======
         'TijsVerkoyen\\CssToInlineStyles\\CssToInlineStyles' => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src/CssToInlineStyles.php',
         'TijsVerkoyen\\CssToInlineStyles\\Css\\Processor' => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src/Css/Processor.php',
         'TijsVerkoyen\\CssToInlineStyles\\Css\\Property\\Processor' => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src/Css/Property/Processor.php',
@@ -3300,7 +3274,6 @@ class ComposerStaticInitfbe6cd255cb4cec8e64af0c608619820
         'phpDocumentor\\Reflection\\Types\\String_' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/String_.php',
         'phpDocumentor\\Reflection\\Types\\This' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/This.php',
         'phpDocumentor\\Reflection\\Types\\Void_' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/Void_.php',
->>>>>>> b1e6fe831680d4ac6e15ec76639e68efeb2ea2a1
     );
 
     public static function getInitializer(ClassLoader $loader)
