@@ -21,9 +21,9 @@ Route::get('/', function () {
 
 //REDIRECCIONA AL FORMULARIO DE CONSULTA DESDE UN INICIO
 
-// Route::get('/', function () {
-//     return redirect('form_consulta');
-// });
+Route::get('/', function () {
+    return redirect('home_partes');
+});
 
 Route::get('form_consulta', 'ConsultasController@form_consulta');
 Route::get('consultaMesaAsignada/{recinto}', 'ConsultasController@consultaMesaAsignada');
@@ -113,7 +113,8 @@ Route::group(['middleware' => 'cors'], function () {
 Route::group(['middleware' => 'auth'], function () {
 
     Route::get('home_partes', 'PartesDiariosController@home_partes');
-    Route::post('form_llenar_parte_diario', 'PartesDiariosController@form_llenar_parte_diario');
+    Route::get('form_llenar_parte_diario', 'PartesDiariosController@form_llenar_parte_diario');
+    Route::post('crear_parte_diario', 'PartesDiariosController@crear_parte_diario');
 
 
 

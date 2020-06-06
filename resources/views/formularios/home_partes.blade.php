@@ -55,7 +55,7 @@
 								<div class="row">
 									<div class="col-md-12">
 										<div class="myform-bottom">
-											<form action="{{ url('form_llenar_parte_diario') }}"  method="post">
+											<form action="{{ url('form_llenar_parte_diario') }}"  method="get">
 												<input type="hidden" name="" value="">
 												<br>
 												<button type="submit" style="font-size: 16px; padding: 30px;width: 100%; background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#87CEEB), color-stop(100%,#4682B4)); -webkit-box-shadow: inset 0px 0px 6px #fff; border-radius: 10px;">

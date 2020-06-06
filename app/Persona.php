@@ -3,6 +3,8 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Partes\ParteDiario;
+use PhpParser\Builder\Class_;
 
 class Persona extends Model
 {
@@ -23,5 +25,13 @@ class Persona extends Model
     public function recinto()
     {
         return $this->belongsTo('App\Recinto', 'id_recinto', 'id_recinto');
+    }
+
+        /**
+     * Get the User record associated with the Person.
+     */
+    public function parte_diario()
+    {
+        return $this->hasMany(Models\Partes\ParteDiario::class, 'id_persona', 'id_persona');
     }
 }
