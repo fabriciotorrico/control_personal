@@ -11,6 +11,7 @@ Arabic (ar)
 * [bo3bdo](https://github.com/bo3bdo)
 * [Ibrahim AshShohail](https://github.com/laheab)
 * [Ihab Shoully](https://github.com/shoully)
+* [Mohamed Sabil](https://github.com/mohamedsabil83)
 * [Youghourta Benali](https://github.com/djug)
 
 Bosnian (bs)
@@ -23,7 +24,7 @@ Brazilian (pt-BR)
 
 * [c0h1b4](https://github.com/c0h1b4)
 * [Fernando Henrique Bandeira](https://github.com/fernandobandeira)
-* [Gabriel Machado](https://github.com/gmsantosxl)
+* [Gabriel Machado](https://github.com/gmsantos)
 * [insign](https://github.com/insign)
 * [miguelbgouveia](https://github.com/miguelbgouveia)
 * [Ramiro Varandas Jr](https://github.com/ramirovjr)
@@ -135,6 +136,7 @@ Hungarian (hu)
 * [lintaba](https://github.com/lintaba)
 * [Tamás Erdélyi](https://github.com/terdelyi)
 * [Zsombor Franczia](https://github.com/frzsombor)
+* [balping](https://github.com/balping)
 
 Icelandic (is)
 
@@ -160,6 +162,7 @@ Japanese (ja)
 * [Hirohisa Kawase](https://github.com/HiroKws)
 * [Yuya Takahashi](https://github.com/takahashiyuya)
 * [Jumilla](https://github.com/jumilla)
+* [Keishi Mitsuhashi](https://github.com/xenbeat)
 
 Korean (ko)
 
@@ -218,6 +221,7 @@ Russian (ru)
 
 * [Evgeny Kovalev](https://github.com/EvgenyKovalev)
 * [Vasily Tsybenko](https://github.com/VasayXTX)
+* [Andrey Helldar](https://github.com/andrey-helldar)
 
 Sardinian (sc)
 
@@ -295,3 +299,4 @@ Vietnamese (vi)
 
 * [anhsaker](https://github.com/anhsaker)
 * [Nguyễn Văn Ánh](https://github.com/anhskohbo)
+* [Đinh Quốc Hân](https://github.com/dinhquochan)

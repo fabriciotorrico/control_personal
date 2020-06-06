@@ -1,7 +1,6 @@
 <?php
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Validation Language Lines
@@ -32,6 +31,7 @@ return [
     'boolean'              => ':attribute ठिक अथवा बेठिक हुनुपर्छ।',
     'confirmed'            => ':attribute दाेहाेर्याइएकाे मिलेन।',
     'date'                 => ':attribute को मिति मिलेन।',
+    'date_equals'          => 'The :attribute must be a date equal to :date.',
     'date_format'          => ':attribute को ढाँचा :format जस्तो हुनुपर्छ।',
     'different'            => ':attribute र :other फरक हुनुपर्छ।',
     'digits'               => ':attribute :digits अंकको हुनुपर्छ।',
@@ -42,12 +42,38 @@ return [
     'exists'               => 'छानिएको :attribute अमान्य छ।',
     'file'                 => 'The :attribute must be a file.',
     'filled'               => ':attribute दिइएको हुनुपर्छ।',
+    'gt'                   => [
+        'numeric' => 'The :attribute must be greater than :value.',
+        'file'    => 'The :attribute must be greater than :value kilobytes.',
+        'string'  => 'The :attribute must be greater than :value characters.',
+        'array'   => 'The :attribute must have more than :value items.',
+    ],
+    'gte'                  => [
+        'numeric' => 'The :attribute must be greater than or equal :value.',
+        'file'    => 'The :attribute must be greater than or equal :value kilobytes.',
+        'string'  => 'The :attribute must be greater than or equal :value characters.',
+        'array'   => 'The :attribute must have :value items or more.',
+    ],
     'image'                => ':attribute मा फोटो हुनुपर्छ।',
     'in'                   => 'छानिएको :attribute अमान्य छ।',
     'in_array'             => 'The :attribute field does not exist in :other.',
     'integer'              => ':attribute पूर्ण संख्या हुनुपर्छ।',
     'ip'                   => ':attribute मा दिइएको मान्य IP ठेगाना हुनुपर्छ।',
+    'ipv4'                 => 'The :attribute must be a valid IPv4 address.',
+    'ipv6'                 => 'The :attribute must be a valid IPv6 address.',
     'json'                 => ':attribute मा दिइएको मान्य JSON string हुनुपर्छ।',
+    'lt'                   => [
+        'numeric' => 'The :attribute must be less than :value.',
+        'file'    => 'The :attribute must be less than :value kilobytes.',
+        'string'  => 'The :attribute must be less than :value characters.',
+        'array'   => 'The :attribute must have less than :value items.',
+    ],
+    'lte'                  => [
+        'numeric' => 'The :attribute must be less than or equal :value.',
+        'file'    => 'The :attribute must be less than or equal :value kilobytes.',
+        'string'  => 'The :attribute must be less than or equal :value characters.',
+        'array'   => 'The :attribute must not have more than :value items.',
+    ],
     'max'                  => [
         'numeric' => ':attribute :max भन्दा बढी हुनुहुदैन।',
         'file'    => ':attribute :max kilobytes भन्दा बढी हुनुहुदैन।',
@@ -63,6 +89,7 @@ return [
         'array'   => ':attribute मा कम्तिमा :min आइटम हुनुपर्छ।',
     ],
     'not_in'               => 'छानिएको :attribute अमान्य छ।',
+    'not_regex'            => 'The :attribute format is invalid.',
     'numeric'              => ':attribute संख्या हुनुपर्छ।',
     'present'              => 'The :attribute field must be present.',
     'regex'                => ':attribute को ढाँचा मिलेन।',
@@ -80,11 +107,13 @@ return [
         'string'  => ':attribute :size वर्णको हुनुपर्छ।.',
         'array'   => ':attribute मा :size आइटम हुनुपर्छ।',
     ],
+    'starts_with'          => 'The :attribute must start with one of the following: :values',
     'string'               => ':attribute string हुनुपर्छ।',
     'timezone'             => ':attribute मान्य समय क्षेत्र हुनुपर्छ।',
     'unique'               => 'यो :attribute पहिले नै लिई सकेको छ।',
     'uploaded'             => 'The :attribute failed to upload.',
     'url'                  => ':attribute को ढांचा मिलेन।',
+    'uuid'                 => 'The :attribute must be a valid UUID.',
 
     /*
     |--------------------------------------------------------------------------
@@ -115,5 +144,4 @@ return [
     */
 
     'attributes' => [],
-
 ];

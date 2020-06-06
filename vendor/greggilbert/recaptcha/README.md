@@ -1,3 +1,9 @@
+# Abandoned
+
+All good things must come to an end. The sad fact is that I don't have time to maintain this package, so the release of Laravel 6 is as good as any to make a clean break. You should take a look at the forks to see if anyone is carrying on the torch.
+
+Thanks to everyone for sticking by this package for years!
+
 Recaptcha
 =========
 

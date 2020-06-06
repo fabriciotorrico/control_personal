@@ -2,12 +2,12 @@
 /*******************************************************************************
 * FPDF                                                                         *
 *                                                                              *
-* Version: 1.81                                                                *
-* Date:    2015-12-20                                                          *
+* Version: 1.82                                                                *
+* Date:    2019-12-07                                                          *
 * Author:  Olivier PLATHEY                                                     *
 *******************************************************************************/
 
-define('FPDF_VERSION','1.81');
+define('FPDF_VERSION','1.82');
 
 class Fpdf
 {
@@ -575,8 +575,6 @@ function AcceptPageBreak()
 
 function Cell($w, $h=0, $txt='', $border=0, $ln=0, $align='', $fill=false, $link='')
 {
-	//Incluye acentos..!!!
-	$txt = utf8_decode($txt);
 	// Output a cell
 	$k = $this->k;
 	if($this->y+$h>$this->PageBreakTrigger && !$this->InHeader && !$this->InFooter && $this->AcceptPageBreak())
@@ -1006,6 +1004,9 @@ function Output($dest='', $name='', $isUTF8=false)
 				header('Content-Disposition: inline; '.$this->_httpencode('filename',$name,$isUTF8));
 				header('Cache-Control: private, max-age=0, must-revalidate');
 				header('Pragma: public');
+				if (config('fpdf.useVaporHeaders')) {
+					header('X-Vapor-Base64-Encode: True');
+				}
 			}
 			echo $this->buffer;
 			break;
@@ -1016,6 +1017,9 @@ function Output($dest='', $name='', $isUTF8=false)
 			header('Content-Disposition: attachment; '.$this->_httpencode('filename',$name,$isUTF8));
 			header('Cache-Control: private, max-age=0, must-revalidate');
 			header('Pragma: public');
+			if (config('fpdf.useVaporHeaders')) {
+				header('X-Vapor-Base64-Encode: True');
+			}
 			echo $this->buffer;
 			break;
 		case 'F':
@@ -1041,9 +1045,6 @@ protected function _dochecks()
 	// Check mbstring overloading
 	if(ini_get('mbstring.func_overload') & 2)
 		$this->Error('mbstring overloading must be disabled');
-	// Ensure runtime magic quotes are disabled
-	if(get_magic_quotes_runtime())
-		@set_magic_quotes_runtime(0);
 }
 
 protected function _checkoutput()

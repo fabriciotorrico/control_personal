@@ -1,7 +1,6 @@
 <?php
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Validation Language Lines
@@ -32,6 +31,7 @@ return [
     'boolean'              => 'Reiturinn :attribute verður að vera réttur eða rangur.',
     'confirmed'            => 'Staðfesting á reitnum :attribute passar ekki.',
     'date'                 => 'Reiturinn :attribute er ekki rétt dagsetning.',
+    'date_equals'          => 'The :attribute must be a date equal to :date.',
     'date_format'          => 'Reiturinn :attribute passar ekki við :format.',
     'different'            => 'Reiturinn :attribute og :other verða að vera ólíkir.',
     'digits'               => 'Reiturinn :attribute verður að vera :digits tölustafir.',
@@ -42,12 +42,38 @@ return [
     'file'                 => 'The :attribute must be a file.',
     'filled'               => 'Reiturinn :attribute verður að innihalda eitthvað.',
     'exists'               => 'Reiturinn :attribute er nú þegar til.',
+    'gt'                   => [
+        'numeric' => 'The :attribute must be greater than :value.',
+        'file'    => 'The :attribute must be greater than :value kilobytes.',
+        'string'  => 'The :attribute must be greater than :value characters.',
+        'array'   => 'The :attribute must have more than :value items.',
+    ],
+    'gte'                  => [
+        'numeric' => 'The :attribute must be greater than or equal :value.',
+        'file'    => 'The :attribute must be greater than or equal :value kilobytes.',
+        'string'  => 'The :attribute must be greater than or equal :value characters.',
+        'array'   => 'The :attribute must have :value items or more.',
+    ],
     'image'                => 'Reiturinn :attribute verður að vera mynd.',
     'in'                   => 'Reiturinn :attribute er ekki réttur.',
     'in_array'             => 'The :attribute field does not exist in :other.',
     'integer'              => 'Reiturinn :attribute verður að vera tala.',
     'ip'                   => 'Reiturinn :attribute verður að vera lögleg IP-tala.',
+    'ipv4'                 => 'The :attribute must be a valid IPv4 address.',
+    'ipv6'                 => 'The :attribute must be a valid IPv6 address.',
     'json'                 => 'The :attribute must be a valid JSON string.',
+    'lt'                   => [
+        'numeric' => 'The :attribute must be less than :value.',
+        'file'    => 'The :attribute must be less than :value kilobytes.',
+        'string'  => 'The :attribute must be less than :value characters.',
+        'array'   => 'The :attribute must have less than :value items.',
+    ],
+    'lte'                  => [
+        'numeric' => 'The :attribute must be less than or equal :value.',
+        'file'    => 'The :attribute must be less than or equal :value kilobytes.',
+        'string'  => 'The :attribute must be less than or equal :value characters.',
+        'array'   => 'The :attribute must not have more than :value items.',
+    ],
     'max'                  => [
         'numeric' => 'Reiturinn :attribute verður að innihalda færri stafi en :max.',
         'file'    => 'Reiturinn :attribute verður að vera minni en :max kílóbæt.',
@@ -63,6 +89,7 @@ return [
         'array'   => 'Reiturinn :attribute verður að vera að lágmarki :min stök.',
     ],
     'not_in'               => 'Reiturinn :attribute er ógildur.',
+    'not_regex'            => 'The :attribute format is invalid.',
     'numeric'              => 'Reiturinn :attribute verður að vera tala.',
     'present'              => 'The :attribute field must be present.',
     'regex'                => 'Reiturinn :attribute er ekki á réttu formi.',
@@ -80,11 +107,13 @@ return [
         'string'  => 'Reiturinn :attribute verður að vera :size stafir.',
         'array'   => 'Reiturinn :attribute verður að innihalda :size hluti.',
     ],
+    'starts_with'          => 'The :attribute must start with one of the following: :values',
     'string'               => 'The :attribute must be a string.',
     'timezone'             => 'Reiturinn :attribute verður að vera rétt tímabelti.',
     'unique'               => 'Reiturinn :attribute er því miður ekki leyfilegur. Það er annar eins.',
     'uploaded'             => 'The :attribute failed to upload.',
     'url'                  => 'Reiturinn :attribute verður að vera netslóð.',
+    'uuid'                 => 'The :attribute must be a valid UUID.',
 
     /*
     |--------------------------------------------------------------------------
@@ -97,7 +126,7 @@ return [
     |
     */
 
-    'custom'               => [
+    'custom' => [
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],
@@ -114,7 +143,7 @@ return [
     |
     */
 
-    'attributes'           => [
+    'attributes' => [
         'name'                  => 'Nafn',
         'username'              => 'Notendanafn',
         'email'                 => 'Netfang',
@@ -145,5 +174,4 @@ return [
         'available'             => 'Í boði',
         'size'                  => 'Stærð',
     ],
-
 ];

@@ -1,7 +1,6 @@
 <?php
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Puslapiavimo kalbos eilutės
@@ -15,5 +14,4 @@ return [
 
     'previous' => '&laquo; Ankstesnis',
     'next'     => 'Sekantis &raquo;',
-
 ];
