@@ -1,16 +1,16 @@
 <section  id="content" style="background-color: #002640;">
 
     <div class="" >
-        <div class="container"> 
-                    
+        <div class="container">
+
             <div class="row">
               <div class="col-sm-6 col-sm-offset-3 myform-cont" >
-                
+
                      <div class="myform-top">
                         <div class="myform-top-left">
-                           <img  src="{{ url('img/minculturas_logo.png') }}" class="img-responsive logo" />
-                          <h3 class="text-muted">Registro de Usuarios.</h3>
-                            <p class="text-muted">Por favor ingrese sus datos personales:</p>
+                           <img  src="{{ url('img/logo_igm.jpeg') }}" class="img-responsive logo" />
+                          <h3 class="text-muted">Registro de Personas</h3>
+                            <p class="text-muted">Por favor ingrese sus datos personales</p>
                         </div>
                         <div class="myform-top-right">
                           <i class="fa fa-user"></i>
@@ -19,7 +19,7 @@
 
                   <div class="col-md-12" >
                     @if (count($errors) > 0)
-                     
+
                         <div class="alert alert-danger">
                             <strong>UPPS!</strong> Error al Registrar<br>
                             <ul>
@@ -28,139 +28,105 @@
                                 @endforeach
                             </ul>
                         </div>
-                    
+
                     @endif
                    </div  >
 
                     <div class="myform-bottom">
-                      
-                            <form   action="{{ url('crear_usuario') }}"  method="post" id="f_crear_usuario" class="formentrada" >
+
+                    <form action="{{ url('crear_usuario') }}" method="post" id="f_crear_usuario" class="formentrada" >
                       <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                      
+
                         <div class="col-md-12">
                             <div class="form-group">
-                                <label class="text-muted ">Nombres</label>
-                                <input type="text" name="nombre" placeholder="Nombre Completo" class="form-control" value="{{ old('nombre') }}" >
+                                <label class="text">Nombres</label>
+                                <input type="text" name="nombre" placeholder="Nombres" class="form-control" value="{{ old('nombre') }}" required>
                             </div>
                         </div>
                         <div class="col-md-6">
 
                             <div class="form-group">
-                                    <label class="text-muted ">Apellido Paterno</label>
-                                <input type="text" name="paterno" placeholder="Apellido Paterno" class="form-control" value="{{ old('paterno') }}" >
+                                    <label class="text">Apellido Paterno</label>
+                                <input type="text" name="paterno" placeholder="Apellido Paterno" class="form-control" value="{{ old('paterno') }}" required>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                    <label class="text-muted ">Apellido Materno</label>
+                                    <label class="text">Apellido Materno</label>
                                 <input type="text" name="materno" placeholder="Apellido Materno" class="form-control" value="{{ old('materno') }}" >
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                    <label class="text-muted ">Cedula de Identidad</label>
-                                <input type="text" class="form-control" id="ci" name="ci" placeholder="No. Carnet"  value="{{ old('ci') }}" >
+                                    <label class="text">Grado o Profesión</label>
+                                <input type="text" name="grado" placeholder="Grado o Profesión" class="form-control" value="{{ old('grado') }}" required>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                    <label class="text-muted ">Email</label>
-                                <input type="email" name="email" placeholder="Correo Electronico" class="form-control"  
-                                value="{{ old('email') }}" />
+                                    <label class="text">Cargo u Observación</label>
+                                <input type="text" name="cargo" placeholder="Cargo u Observación" class="form-control" value="{{ old('cargo') }}" required>
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-12">
                             <div class="form-group">
-                                <label class="text-muted ">Telefono</label>
-                                <input type="number" name="telefono" placeholder="Telefono" class="form-control"  value="{{ old('telefono') }}" />
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label class="text-muted ">Domicilio</label>
-                                <input type="text" name="domicilio" placeholder="Domicilio" class="form-control"  value="{{ old('domicilio') }}" />
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label class="text-muted ">Fecha de Ingreso</label>
-                                <input type="date" name="fechaingreso" placeholder="Fecha de Ingreso" class="form-control" value="{{ old('fechaingreso') }}" />
-                            </div>
-                        </div>
-                        {{-- <div class="col-md-6">
-                            <div class="form-group">
-                                <label class="text-muted ">Item</label>
-                                <input type="number" name="item" placeholder="Item" class="form-control"  
-                                    value="{{ old('item') }}" />
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label class="text-muted ">Salario</label>
-                                <input type="number" name="haber" placeholder="Salario" class="form-control" value="{{ old('haber') }}" />
-                            </div>
-                        </div> --}}
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label class="text-muted ">Cargo</label>
-                                <select class="form-control" name="cargo">
-                                    @foreach ($cargos as $cargo)
-                                <option value="{{$cargo->idcargo}}" {{ old('cargo', $cargo->idcargod) == $cargo->idcargo ? 'selected' : '' }}>{{$cargo->nombrecargo}}</option>
+                                <label class="text">Dependencia</label>
+                                  <select class="form-control" name="id_depto">
+                                    <option value="0">Sin Departamento (Administradores del Sistema)</option>
+                                    @foreach ($deptos as $depto)
+                                      <option value="{{$depto->id_depto}}">{{$depto->sigla}}</option>
                                     @endforeach
+                                  </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                    <label class="text">Cedula de Identidad</label>
+                                <input type="text" class="form-control" name="cedula_identidad" placeholder="No. Carnet"  value="{{ old('cedula_identidad') }}" required>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                    <label class="text">Complemento</label>
+                                <input type="text" class="form-control" name="complemento_cedula" placeholder="Si correpsonde"  value="{{ old('complemento_cedula') }}" >
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label class="text">Expedido</label>
+                                <select class="form-control" name="expedido" required>
+                                    <option value="LP">LP</option>
+                                    <option value="OR">OR</option>
+                                    <option value="PT">PT</option>
+                                    <option value="CB">CB</option>
+                                    <option value="SC">SC</option>
+                                    <option value="BN">BN</option>
+                                    <option value="PA">PA</option>
+                                    <option value="TJ">TJ</option>
+                                    <option value="CH">CH</option>
                                 </select>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label class="text-muted ">Area</label>
-                                <select class="form-control" name="area">
-                                    @foreach ($unidades as $unidad)
-                                <option value="{{$unidad->id}}" {{ old('area', $unidad->id) == $unidad->id ? 'selected' : '' }}>{{$unidad->nombre}}</option>
-                                    @endforeach
-                                </select>
+                                <label class="text">Telefono Celular</label>
+                                <input type="number" name="telefono_celular" placeholder="Nro. de Celular" class="form-control"  value="{{ old('telefono_celular') }}" required>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label class="text-muted ">Tipo de Usuario</label>
-                                
-                                <select class="form-control" name="tipoUsuario" >
-                                    <option value="4" {{ old('tipoUsuario') == 4 ? 'selected' : '' }}>Encuestador</option >
-                                    <option value="3" {{ old('tipoUsuario') == 3 ? 'selected' : '' }}>Revisor</option>
-                                </select>
+                                <label class="text">Fecha de Nacimiento</label>
+                                <input type="date" name="fecha_nacimiento" placeholder="Fecha de Nacimiento" class="form-control"  value="{{ old('fecha_nacimiento') }}" required>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label class="text-muted ">Password</label>
-                                <input type="password" name="password" placeholder="Password" class="form-control" >
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                                <div class="form-group">
-                                    <label class="text-muted ">Confirme Password</label>
-                                    <input type="password" name="password_confirmation" placeholder="Repite Password" class="form-control" >
-                            </div>
-                        </div>
-{{-- 
-                        <div class="form-group">
-                         {!! Recaptcha::render() !!}
-                        </div> --}}
 
                         <button type="submit" class="mybtn">Registrar</button>
                       </form>
-                    
+
                     </div>
               </div>
             </div>
-            {{-- <div class="row">
-                <div class="col-sm-12 mysocial-login">
-                    <h3>...Visitanos en nuestra Pagina</h3>
-                    <h1><strong>minculturas.gob.bo</strong>.net</h1>
-                </div>
-            </div> --}}
         </div>
       </div>
- 
-</section>
 
+</section>

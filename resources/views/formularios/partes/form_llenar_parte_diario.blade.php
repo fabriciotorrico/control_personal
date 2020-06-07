@@ -50,14 +50,14 @@
 						<td>{{ $key + 1 }}</td>
 						 <td>{{ $dato->grado." ".$dato->paterno." ".$dato->materno." ".$dato->nombre }}</td>
 						 @foreach ($estados as $item)
-							<td><input type="radio" name="id_usuario_{{$dato->id_persona}}" class="[id_usuario-{{$dato->id_persona}}]" value="{{$item->id_estado}}"></td>{{-- T Trabajando --}}
+							<td><input type="radio" name="id_usuario_{{$dato->id_persona}}" class="[id_usuario-{{$dato->id_persona}}]" value="{{$item->id_estado}}"></td>
 						@endforeach
 					</tr>
 			  @endforeach
 			</tbody>
 		</table>
 		{{-- <button type="submit" class="mybtn">Guardar</button> --}}
-		<button type="submit" class="btn btn-block btn-primary">Guardar</button>
+		<button type="submit" class="btn btn-block btn-primary">Enviar</button>
 	</form>
 	</div>
 </div>

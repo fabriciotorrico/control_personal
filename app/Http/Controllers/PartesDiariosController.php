@@ -22,7 +22,7 @@ class PartesDiariosController extends Controller
 
     public function form_llenar_parte_diario(){
         $logueado  = Persona::find(Auth::user()->id_persona);
-        
+
         $tiempo_actual = Carbon::now();
 
         $fecha_actual = $tiempo_actual->toDateString();
@@ -33,16 +33,18 @@ class PartesDiariosController extends Controller
         ->where('activo', 1)->first();
 
         if ($horario == null) {
-            return redirect('/home_partes')->with('mensaje_error', 'Está fuera del horario de llenado o solicite su habilitación');
+            return redirect('/home_partes')->with('mensaje_error', 'Disculpe, en este momento está fuera del horario de llenado de partes, por favor solicite su habilitación.');
         }
-        
+
+        //Tomamos los datos de las personas a mostrar en la lista (solo los del depto de la persona logeada)
         $datos = \DB::table('personas')->orderBy('paterno', 'asc')->where('id_depto', $logueado->id_depto)->where('activo', 1)->get();
-        
-        // $users = Topic::with('latestPost')->get()->sortByDesc('latestPost.created_at');
-        // $datos = Persona::with('parte_diario')->get()->where('fecha', date('2020-06-05'));
-        $parte_diario = ParteDiario::where('fecha', $tiempo_actual->toDateString())
-                ->where('id_persona', $logueado->id_persona)
-                ->where('activo', 1)
+
+        //Tomamos los registros de la tabla partes_diarios con la fecha y horario actual, para verificar si ya introdujo su parte.
+        $parte_diario = ParteDiario::where('partes_diarios.fecha', $tiempo_actual->toDateString())
+                ->leftjoin('personas', 'partes_diarios.id_persona', 'personas.id_persona')
+                ->where('personas.id_depto', $logueado->id_depto)
+                ->where('partes_diarios.activo', 1)
+                ->select('partes_diarios.id_horario')
                 ->get();
 
         $partes = 0;
@@ -52,17 +54,19 @@ class PartesDiariosController extends Controller
             }
         }
 
+        //Si existen registros (al menos 1) del parte para el horario y fecha actual para el depto del usuario logueado, mostramos el mensaje
         if ($partes > 0) {
-            return redirect('/home_partes')->with('mensaje_error', 'Ya lleno el Parte diario');
+            return redirect('/home_partes')->with('mensaje_error', 'Disculpe, ya envió el parte diario y está prohibida su midificación.');
         }
-        
-        if ($horario == null) {
-            return redirect('/home_partes')->with('mensaje_error', 'Está fuera del horario de llenado o solicite su habilitación');
-        }
+
+        /*if ($horario == null) {
+            return redirect('/home_partes')->with('mensaje_error', 'Disculpe, está fuera del horario de llenado de partes, solicite su habilitación');
+        }*/
 
         $depto = \DB::table('partes_deptos')->where('id_depto', $logueado->id_depto)->first();
 
         $estados = \DB::table('partes_estados')->where('activo', 1)->get();
+
         return view("formularios.partes.form_llenar_parte_diario", compact('datos'))
               ->with('depto', $depto)
               ->with('estados', $estados)
@@ -79,7 +83,7 @@ class PartesDiariosController extends Controller
         $datos = \DB::table('personas')->orderBy('paterno', 'asc')->where('id_depto', $logueado->id_depto)->where('activo', 1)->get();
 
         if (count($solicitud) != count($datos)) {
-            return redirect('/form_llenar_parte_diario')->with('mensaje_error', 'Debe completar la información');
+            return redirect('/form_llenar_parte_diario')->with('mensaje_error', 'Debe llenar la asistencia de todo el personal, no puede dejar opciones sin seleccionar.');
         }
 
         $tiempo_actual = Carbon::now();
@@ -93,10 +97,13 @@ class PartesDiariosController extends Controller
             return redirect('/home_partes')->with('mensaje_error', 'Está fuera del horario de llenado o solicite su habilitación');
         }
 
-        $parte_diario = ParteDiario::where('fecha', $tiempo_actual->toDateString())
-        ->where('id_persona', $logueado->id_persona)
-        ->where('activo', 1)
-        ->get();
+        //Tomamos los registros de la tabla partes_diarios con la fecha y horario actual, para verificar si ya introdujo su parte.
+        $parte_diario = ParteDiario::where('partes_diarios.fecha', $tiempo_actual->toDateString())
+                ->leftjoin('personas', 'partes_diarios.id_persona', 'personas.id_persona')
+                ->where('personas.id_depto', $logueado->id_depto)
+                ->where('partes_diarios.activo', 1)
+                ->select('partes_diarios.id_horario')
+                ->get();
 
         $partes = 0;
         foreach ($parte_diario as $key => $value) {
@@ -105,12 +112,12 @@ class PartesDiariosController extends Controller
             }
         }
 
+        //Si existen registros (al menos 1) del parte para el horario y fecha actual para el depto del usuario logueado, mostramos el mensaje
         if ($partes > 0) {
-            return redirect('/home_partes')->with('mensaje_error', 'Ya se llenó el Parte diario');
+            return redirect('/home_partes')->with('mensaje_error', 'Disculpe, ya envió el parte diario y está prohibida su midificación.');
         }
 
         $fecha_actual = new DateTime(date('Y-m-d'));
-        // $fecha_actual = $fecha_actual->format('d-m-Y');
 
         foreach ($solicitud as $key => $value){
             //Separando id_usuario del request id_usuario_[]
@@ -120,13 +127,14 @@ class PartesDiariosController extends Controller
                  'id_persona' => $id_persona,
                  'fecha' => $fecha_actual,
                  'id_estado' => $value,
+                 'id_registrador' => $logueado->id_persona,
                  'created_at' => $fecha_actual,
                  'updated_at' => $fecha_actual,
                  'activo' => 1]
             ]);
         }
 
-        return redirect('/home_partes')->with('mensaje_exito', 'Información guardada correctamente');
+        return redirect('/home_partes')->with('mensaje_exito', 'Información guardada y enviada correctamente');
     }
 
     public function form_reportes(){
@@ -231,18 +239,30 @@ class PartesDiariosController extends Controller
               ->orderby('personas.paterno')
               ->get();
 
-    //Tomamos las asistencias
-    /*$personas = \DB::table('personas')
-              ->select('personas.id_depto', 'personas.grado', 'personas.paterno', 'personas.materno', 'personas.nombre')
-              ->where('personas.id_depto', $id_depto)
-              ->where('personas.id_activo', 1)
-              ->orderby('personas.paterno')
-              ->get();*/
-
    $pdf = \PDF::loadView('reportes.parte_por_departamento', compact('fecha', 'horario', 'deptos', 'partes', 'detalles'))
                ->setPaper('letter')
                ->stream('parte_por_departamento.pdf');
   return $pdf;
+}
+
+
+public function form_parte_individual(){
+    //Tomamos la fecha actual
+    $fecha_actual = new DateTime(date('Y-m-d'));
+    $fecha_actual = $fecha_actual->format('Y-m-d');
+
+    //Tomamos los horarios
+    $horarios = \DB::table('partes_horarios')->get();
+
+    //Tomamos el departamento del usuario logueado
+    $logueado  = Persona::find(Auth::user()->id_persona);
+    $deptos = \DB::table('partes_deptos')->where('id_depto', $logueado->id_depto)->get();
+
+    //Retornamos la vista
+    return view("formularios.partes.form_parte_individual")
+          ->with('fecha_actual', $fecha_actual)
+          ->with('horarios', $horarios)
+          ->with('deptos', $deptos);
 }
 
 }

@@ -65,26 +65,11 @@ class LoginController extends Controller
     }
 
     public function authenticated($request , $user){
-
-
-        if(\Auth::user()->isRole('controlador')==true){
+        if(\Auth::user()->isRole('registrador')==true){
             return redirect()->intended('home_partes');
         }
         if(\Auth::user()->isRole('admin')==true){
             return redirect()->intended('listado_usuarios');
         }
-        if(\Auth::user()->isRole('registrador')==true){
-            return redirect()->intended('form_agregar_persona');
-        }
-
     }
-
-
-
-
-
-
-
-
-
 }

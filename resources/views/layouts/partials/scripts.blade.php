@@ -15,7 +15,8 @@
 
 <!-- AdminLTE App -->
 <script src="{{ asset('/js/app.min.js') }}" type="text/javascript"></script>
-<script src="{{ asset('/js/ajllita.js') }}" type="text/javascript"></script>
+<!--script src="{{ asset('/js/ajllita.js') }}" type="text/javascript"></script revisar-->
+<script src="{{ asset('/js/partes.js') }}" type="text/javascript"></script>
 
 {{-- Cuenta regresiva --}}
 <script src="{{ asset('/js/countdown.js') }}" type="text/javascript"></script>
@@ -71,14 +72,14 @@
     $(function () {
       //Initialize Select2 Elements
       $('.select2').select2()
-  
+
       //Datemask dd/mm/yyyy
       $('#datemask').inputmask('dd/mm/yyyy', { 'placeholder': 'dd/mm/yyyy' })
       //Datemask2 mm/dd/yyyy
       $('#datemask2').inputmask('mm/dd/yyyy', { 'placeholder': 'mm/dd/yyyy' })
       //Money Euro
       $('[data-mask]').inputmask()
-  
+
       //Date range picker
       $('#reservation').daterangepicker()
       //Date range picker with time picker
@@ -101,12 +102,12 @@
           $('#daterange-btn span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'))
         }
       )
-  
+
       //Date picker
       $('#datepicker').datepicker({
         autoclose: true
       })
-  
+
       //iCheck for checkbox and radio inputs
       $('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
         checkboxClass: 'icheckbox_minimal-blue',
@@ -122,12 +123,12 @@
         checkboxClass: 'icheckbox_flat-green',
         radioClass   : 'iradio_flat-green'
       })
-  
+
       //Colorpicker
       $('.my-colorpicker1').colorpicker()
       //color picker with addon
       $('.my-colorpicker2').colorpicker()
-  
+
       //Timepicker
       $('.timepicker').timepicker({
         showInputs: false

@@ -1,7 +1,7 @@
 <!-- Content Header (Page header) -->
 <section class="content-header">
     <h1>
-        {{-- @yield('contentheader_title', 'encuestas')
+        {{-- @yield('contentheader_title', 'control de personal')
         <small>@yield('contentheader_description')</small> --}}
     </h1>
     <ol class="breadcrumb">

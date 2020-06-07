@@ -49,15 +49,6 @@ return [
             // 'root' => public_path().'/storage',
         ],
 
-        'media/foto_presidenciales' => [
-            'driver' => 'local',
-            'root' => storage_path('media/foto_presidenciales'),
-        ],
-
-        'media/foto_uninominales' => [
-            'driver' => 'local',
-            'root' => storage_path('media/foto_uninominales'),
-        ],
 
         'public' => [
             'driver' => 'local',

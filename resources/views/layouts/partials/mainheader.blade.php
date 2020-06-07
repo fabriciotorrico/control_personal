@@ -9,12 +9,12 @@
         </a> --}}
 <div class="container">
 
+    @role('registrador')
     <div class="navbar-header">
-        <a href="{{ url('home_partes') }}" class="navbar-brand"><i class="fa fa-wpforms"></i> <b>Partes Diarios</b></a>
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
-          <i class="fa fa-bars"></i>
-        </button>
-      </div>
+      <a href="{{ url('home_partes') }}" class="navbar-brand"><i class="fa fa-wpforms"></i> <b>Partes Diarios</b></a>
+    </div>
+    @endrole
+
     <!-- Logo -->
 
         @include('layouts.partials.navbar_top')

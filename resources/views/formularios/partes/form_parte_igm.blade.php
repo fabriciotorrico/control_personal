@@ -40,7 +40,7 @@
 
                     <div id="div_notificacion_sol" class="myform-bottom">
 
-                    <form action="{{ route('parte_igm') }}" method="post" class="" enctype="multipart/form-data">
+                    <form action="{{ route('parte_igm') }}" method="post" class="" enctype="multipart/form-data" target="_blank">
                       <input type="hidden" name="_token" value="{{ csrf_token() }}">
 												<div class="content_p" id="content_p">
 													<div class="form-group">

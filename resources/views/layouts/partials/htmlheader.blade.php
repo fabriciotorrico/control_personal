@@ -1,6 +1,6 @@
 <head>
     <meta charset="UTF-8">
-    <title> Encuestas - @yield('htmlheader_title', 'Encuestas') </title>
+    <title> Control de Personal - @yield('htmlheader_title', 'Control de Personal') </title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     {{-- <meta name="description" content="@yield('description')"> --}}
     <meta name="description" content="Realiza encuestas de producción de Cafe y Cacao">
@@ -8,8 +8,8 @@
     <meta name="keywords" content="encuestas cacao, encuestas cafe, encuestas 2020, bolivia, cacao, cafe">
 
 
-        <!-- Select2 -->
-        <link rel="stylesheet" href="{{ asset('/bower_components/select2/dist/css/select2.min.css') }}"/>
+    <!-- Select2 -->
+    <link rel="stylesheet" href="{{ asset('/bower_components/select2/dist/css/select2.min.css') }}"/>
 
     <!-- Bootstrap 3.3.4 -->
     <link href="{{ asset('/css/bootstrap.css') }}" rel="stylesheet" type="text/css" />

@@ -4,21 +4,25 @@
 </head>
 <body>
   <p class="titulo"></p>
-  <!-- ENCABEZADO -->
   <table style="width:100%; height:4%;">
     <tr>
-      <th>
+      <th class="th_normal" width=20%>
+        <img  src="{{ url('img/logo_igm.jpeg') }} " width="120" height="120">
+      </th>
+      <th class="th_normal" width=60%>
         <p class="titulo">PARTE DIARIO IGM</p>
         <p class="titulo">Fecha: {{ f_formato($fecha) }}</p>
         <p class="titulo">Horario: {{ $horario }}</p>
+      </th>
+      <th class="th_normal" width=20%>
       </th>
     </tr>
   </table>
 
   <br>
-  <table style="width:100%; height:4%;" border="1">
+  <table class="table_principal" style="width:100%; height:4%;" border="1">
     <tr>
-      <th rowspan="2">
+      <th rowspan="2" class="th_oscuro">
         <p class="titulo">Departamento</p>
       </th>
       <th colspan="6">
@@ -93,7 +97,7 @@
             <td>
           <?php
         }?>
-          {{ $depto->sigla }}
+          <p style="text-align: left; margin-left: 10">{{ $depto->sigla }}</p>
         </td>
         <td>
           <!--Registros con id_estado = T = 1-->
@@ -126,16 +130,16 @@
       </tr>
     @endforeach
     <tr>
-      <td colspan="7">
+      <th colspan="7">
         <p class="texto_valores">TOTAL</p>
-      </td>
-      <td>
+      </th>
+      <th>
         <p class="texto_valores">{{ $total }}</p>
-      </td>
+      </th>
     </tr>
   </table>
   <br>
-  <table border="1">
+  <table class="table_leyenda" border="1">
     <tr>
       <th>Abreviación</th>
       <th>Descripción</th>
@@ -164,36 +168,44 @@
       <td><p class="texto_valores">PP</p></td>
       <td><p class="texto_valores">Permiso</p></td>
     </tr>
+    <tr>
+      <td style="background-color: #F5B7B1"></td>
+      <td><p class="texto_valores">No se entregó</p></td>
+    </tr>
   </table>
 
 </body>
 
 <style>
-  .titulo {font: bolt 20px cursive;
-           margin: 5px;}
+  .table_principal {
+     width: 100%;
+     text-align: center;
+     border-collapse: collapse;
+     margin: 0 0 1em 0;
+     caption-side: top;}
 
-  .sangria {margin-left: 3%;
-            margin-right: 3%;
-            margin-top: 3px;}
+   .table_leyenda {
+     width: 30%;
+     text-align: center;
+     border-collapse: collapse;
+     margin: 0 0 1em 0;
+     caption-side: top;}
+
+  th {background: #C7C7C7;}
+
+  .th_normal {background: #FFFFFF;}
+
+
+  .titulo {font: bold 19px cursive;
+           margin: 5px;}
 
   .texto_valores {font: 18px cursive;
           text-align: center;}
 
- .texto {font: 20px cursive;
+  .texto {font: 20px cursive;
          text-align: center;
           margin: 1px;
           margin-left: 3%;
           margin-right: 3%;
           margin-top: 3px;}
-
-   .texto-instrucciones {font-size:12px;
-                         vertical-align: bottom;}
-
-   .texto-instrucciones-2 {font-size:12px;
-                         vertical-align: bottom;
-                         height:25;}
-
-   .color-titulo {background-color: #C2D2D4;}
-
-   .borde-marcado {border:1px solid black; border-bottom:0}
 </style>

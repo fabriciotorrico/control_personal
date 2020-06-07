@@ -63,7 +63,6 @@
 														<div class="">
 															<span  style='font-size: 20px; color:black; height: 50px; font-weight:bold; text-align:center' class="">Llenar parte diario</span>
 															<br>
-															<!--span class="info-box-number">Cultivos Asociados al Café</span-->
 														</div>
 													</div>
 												</button>

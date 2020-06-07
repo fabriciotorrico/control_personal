@@ -22,10 +22,6 @@ class Persona extends Model
     /**
      * Get the User record associated with the Person.
      */
-    public function recinto()
-    {
-        return $this->belongsTo('App\Recinto', 'id_recinto', 'id_recinto');
-    }
 
         /**
      * Get the User record associated with the Person.
