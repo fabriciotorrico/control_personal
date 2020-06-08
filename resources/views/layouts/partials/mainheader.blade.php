@@ -9,11 +9,14 @@
         </a> --}}
 <div class="container">
 
+<div class="navbar-header">
     @role('registrador')
-    <div class="navbar-header">
       <a href="{{ url('home_partes') }}" class="navbar-brand"><i class="fa fa-wpforms"></i> <b>Partes Diarios</b></a>
-    </div>
     @endrole
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+      <i class="fa fa-bars"></i>
+    </button>
+  </div>
 
     <!-- Logo -->
 
